@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --large-size:2.8rem;
+  --medium-size:1.2rem;
+  --small-size:1rem;
+
+  --primary-color:#acd9b2;
+  --primary-color-active:#7fb185;
+  --form-color:#f7f7f7;
+
+  --form-radious:12px;
+  --input-shadow: 2px 2px 4px lightgray
+}
+body{
+  font-family: "quicksand";
+  min-height: 100vh;
+  position: relative;
+}
+
+button,p,span,a,input{
+  font-size: var(--medium-size);
+}
+/* 
+main{
+  height: 100vh;
+  padding: 3.5rem 0 0;
+} */

@@ -1,0 +1,10 @@
+.information{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: var(--medium-size);
+}
+
+.information__title{
+  font-weight: 700;
+}

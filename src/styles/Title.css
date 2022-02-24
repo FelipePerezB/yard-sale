@@ -1,0 +1,42 @@
+.title{
+  font-weight: 700;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  margin: 8vh 0 calc(8vh - 1.2rem);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.title__text, .title__text--active{
+  font-size: var(--large-size);
+}
+
+.title__text--active{
+  color: var(--primary-color);
+}
+
+.title__logo{
+  display: inline-block;
+  width: var(--large-size);
+  height: var(--large-size);
+  /* background: url("./../assets/favicon_bota_fora.svg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+nav .title__text, nav .title__text--active{
+  font-size: 1.2rem;
+}
+
+nav .title{
+  height: auto;
+}
+
+nav .title__logo{
+  width: 1.2rem;
+  height: 1.2rem;
+}
