@@ -3,23 +3,16 @@ import Button from '../components/Button'
 import Information from '../containers/Information'
 import Input from '../components/Input'
 import Title from '../containers/Title'
-import InformationTitle from '../components/InformationTitle'
-import InformationText from '../components/InformationText'
+import Main from '../containers/Main'
 
 function NewPassword() {
   return (
-    <>
+    <Main>
       <Title/>
-      <Information>
-        <>
-          <InformationTitle>
-            Create a new password
-          </InformationTitle>
-          <InformationText>
-            Enter a new password for your account
-          </InformationText>
-        </>
-      </Information>
+      <Information
+       title="Create a new password" 
+       text="Enter a new password for your account"
+      />
       <Input>
         Password
       </Input>
@@ -29,7 +22,7 @@ function NewPassword() {
       <Button>
         Confirm new password
       </Button>
-    </>    
+    </Main>    
   )
 }
 

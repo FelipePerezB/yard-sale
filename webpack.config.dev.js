@@ -3,17 +3,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const miniCssExtractPlugin=require("mini-css-extract-plugin")
 module.exports={
     entry:"./src/index.js",
-    mode:"development",
     output:{
         path:path.resolve(__dirname,"dist"),
         filename:"bundle.js",
-        publicPath:"/"
+        publicPath:"/",
+        assetModuleFilename: "assets/images/[hash][ext][query]"
     },
+    mode:"development",
     resolve:{
         extensions:[
             ".js",
             ".jsx"
-        ]
+        ],
+        alias:{
+            "@styles": path.resolve(__dirname, "./src/styles")
+        }
     },
     module:{
         rules:[
@@ -37,7 +41,11 @@ module.exports={
                     "css-loader",
                     "sass-loader",
                 ]
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                type: "asset"
+            },
         ]
     },
     plugins:[

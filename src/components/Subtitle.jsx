@@ -1,9 +1,11 @@
 import React from 'react'
 import "../styles/Subtitle.css"
 
-function Subtitle() {
+function Subtitle({children}) {
   return (
-    <h1 className='subtitle' >My account</h1>    
+    <h1 className='subtitle' >
+      {children}
+    </h1>    
   )
 }
 

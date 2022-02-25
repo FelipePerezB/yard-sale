@@ -1,10 +1,10 @@
 import React from 'react'
 import "../styles/LinkButton.css"
 
-function LinkButton({children}) {
+function LinkButton({children, href}) {
   return (
     <div className='link-button-container'>
-      <a href="/">{children}</a>
+      <a href={ href }>{children}</a>
     </div>
   )
 }

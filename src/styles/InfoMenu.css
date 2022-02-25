@@ -1,0 +1,23 @@
+.orders-account a, .account-info a{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.orders-account{
+  font-weight: 500;
+}
+
+.account-info{
+  position: absolute;
+  bottom: 1.2rem;
+}
+
+.account-info a, .account-info span{
+  font-size: var(--small-size);
+}
+
+.account-info a{
+  width: max-content;
+  color: var(--primary-color);
+}

@@ -1,3 +1,5 @@
+/* Arreglar la scrollvar */
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -18,15 +20,30 @@
 }
 body{
   font-family: "quicksand";
-  min-height: 100vh;
-  position: relative;
+  /* min-height: 100vh;
+  position: relative; */
 }
 
 button,p,span,a,input{
   font-size: var(--medium-size);
 }
-/* 
-main{
-  height: 100vh;
-  padding: 3.5rem 0 0;
-} */
+
+::-webkit-scrollbar{
+  background: none;
+}
+
+.price{
+  font-weight: 500;
+}
+
+.article{
+  font-size: var(--small-size);
+  font-weight: 300;
+}
+
+
+/* main{
+
+}  min-height: 100%;
+  width: 100%;
+  margin: 0 auto; */

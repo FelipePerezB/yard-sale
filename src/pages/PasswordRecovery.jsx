@@ -4,33 +4,26 @@ import Information from '../containers/Information'
 import Input from '../components/Input'
 import LinkButton from '../components/LinkButton'
 import Title from '../containers/Title'
-import InformationTitle from '../components/InformationTitle'
-import InformationText from '../components/InformationText'
+import Main from '../containers/Main'
 
 function PasswordRecovery() {
   return (
-    <>
+    <Main>
       <Title />
-      <Information>
-        <>
-          <InformationTitle>
-            Password recovery
-          </InformationTitle>
-          <InformationText>
-            Inform the email address used to create your account
-          </InformationText>
-        </>
-      </Information>
-      <Input>
+      <Information
+       title="Password recovery" 
+       text="Inform the email address used to create your account"
+      />
+      <Input type="email">
         Email address
       </Input>
       <Button>
         Submit
       </Button>
-      <LinkButton>
+      <LinkButton href="/">
         Back to login
       </LinkButton>
-    </>
+    </Main>
     
   )
 }

@@ -1,5 +1,11 @@
 import React from 'react'
+import NavIcon from '../components/NavIcon'
 import "../styles/Header.css"
+import Title from "../containers/Title"
+
+import menu from "../assets/icons/menu.svg"
+import cart from "../assets/icons/cart.svg"
+import logo from "../assets/icons/logo.svg"
 
 function Header() {
   return (
@@ -7,18 +13,18 @@ function Header() {
       <nav>
         <ul>
           <li className="nav__menu">
-            <span className="menu-icon" />
+            <NavIcon
+              link="/menu-mobile"
+              img={menu}
+            />
           </li>
           <li>
-            <section className="title">
-              <span className="title__logo" />
-              <p className="title__text--active">YARD</p>
-              <p className="title__text">Sale</p>
-            </section>
+            <Title/>
           </li>
-          <li className="nav__cart">
-            <span className="cart-icon" />
-          </li>
+          <NavIcon
+              link="/shopping-cart"
+              img={cart}
+            />
         </ul>
       </nav>
       <div className='space' ></div>

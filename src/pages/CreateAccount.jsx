@@ -2,10 +2,11 @@ import React from 'react'
 import Button from '../components/Button'
 import Input from '../components/Input'
 import Title from '../containers/Title'
+import Main from "../containers/Main"
 
 function CreateAccount() {
   return (
-    <>
+    <Main>
       <Title />
       <Input>
         Name
@@ -19,7 +20,7 @@ function CreateAccount() {
       <Button>
         Create account
       </Button>
-    </>
+    </Main>
   )
 }
 

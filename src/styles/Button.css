@@ -1,5 +1,4 @@
-.button{
-  box-sizing: content-box;
+.button, .button-white{
   display: inline-block;
   border-radius: var(--form-radious);
   background-color: var(--primary-color);
@@ -8,8 +7,6 @@
   border: none;
   color: white;
   cursor:pointer;
-  /* position:absolute;
-  bottom: 1.2rem; */
 }
 
 .button:active{
@@ -18,4 +15,18 @@
 
 .button:hover{
   box-shadow: var(--input-shadow);
+}
+
+.button-white{
+  background-color: white;
+  border: var(--primary-color) 2px solid;
+  color: var(--primary-color);
+}
+
+.drop-button{
+  position: absolute;
+  left: 16px;
+  bottom: 1.2rem;
+  width: calc(100% - 32px);
+  max-width: 100%;
 }

@@ -1,0 +1,40 @@
+.categories, .categories-mobile{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  gap: 1rem;
+  padding: 4px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.categories a{
+  display: inline-block;
+  color: lightgray;
+  font-size: var(--small-size);
+  cursor: pointer;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.categories a:hover{
+  color: var(--primary-color);
+}
+
+.categories a:hover{
+  border-radius: var(--form-radious);
+  outline: 1px solid var(--primary-color);
+}
+
+.categories-mobile{
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px rgba(211, 211, 211, 0.319) solid;
+}
+
+.categories-mobile a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}

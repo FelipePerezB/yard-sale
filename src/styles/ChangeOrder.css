@@ -1,0 +1,14 @@
+.change-order{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.change-order span{
+  font-weight: 500;
+}
+
+.change-order select{
+  padding: 4px;
+  border-radius: var(--form-radious);
+}
