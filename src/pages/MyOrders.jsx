@@ -4,23 +4,33 @@ import Product from '../components/Product'
 import Header from '../containers/Header'
 import Main from '../containers/Main'
 
+import boat from "@images/boat.jpg"
+
 function MyOrders() {
   return (
     <>
       <Header/>
-      <Main>
+      <Main type='main-header'>
       <Order
         date="27.2.2020"
         numberOfArticles="2 articles"
         price="$500.00"
       />
       <Product
-        type="product"
+        img={boat}
+        type="product-order"
         article="Boat"
         price="$120.00"
       />
       <Product
-        type="product"
+        img={boat}
+        type="product-order"
+        article="Boat"
+        price="$120.00"
+      />
+      <Product
+        img={boat}
+        type="product-order"
         article="Boat"
         price="$120.00"
       />

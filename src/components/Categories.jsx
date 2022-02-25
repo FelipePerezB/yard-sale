@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Catgeories.css"
+import "@styles/Catgeories.css"
 function Categories({type="categories"}) {
   return (
     <div className={type} >

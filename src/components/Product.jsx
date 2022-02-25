@@ -1,16 +1,18 @@
 import React from 'react'
-import "../styles/Product.css"
+import "@styles/Product.css"
 
-function Product({type,article,price}) {
+import x from "@icons/x.svg"
+
+function Product({type="product",img,article,price}) {
   return (
     <div className={type}>
-      <div>
-        <img src='../media/download.jpg' />
-        <span>{article}</span>
+      <div className='description'>
+        <img src={img}/>
+        <span className='article'>{article}</span>
       </div>
       <div>
-        <span>{price}</span>
-        <span></span>
+        <span className='price'>{price}</span>
+        <img className='x' src={x} />
       </div>
     </div>    
   )

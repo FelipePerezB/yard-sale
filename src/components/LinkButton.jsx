@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/LinkButton.css"
+import "@styles/LinkButton.css"
 
 function LinkButton({children, href}) {
   return (

@@ -1,5 +1,7 @@
 import React from 'react'
-import "../styles/Order.css"
+import "@styles/Order.css"
+
+import arrow from "@icons/arrow.svg"
 
 function Order({date,numberOfArticles,price}) {
   return (
@@ -8,9 +10,9 @@ function Order({date,numberOfArticles,price}) {
         <span className='date'>{date}</span>
         <span className='number-of-articles' >{numberOfArticles}</span>
       </div>
-      <div>
-      <span className='price'>{price}</span>
-      <span></span>
+      <div className='order__price'>
+        <span className='price'>{price}</span>
+        <img src={arrow}/>
       </div>
     </div>    
   )

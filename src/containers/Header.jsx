@@ -1,11 +1,10 @@
 import React from 'react'
 import NavIcon from '../components/NavIcon'
-import "../styles/Header.css"
+import "@styles/Header.css"
 import Title from "../containers/Title"
 
-import menu from "../assets/icons/menu.svg"
-import cart from "../assets/icons/cart.svg"
-import logo from "../assets/icons/logo.svg"
+import menu from "@icons/menu.svg"
+import cart from "@icons/cart.svg"
 
 function Header() {
   return (
@@ -14,7 +13,7 @@ function Header() {
         <ul>
           <li className="nav__menu">
             <NavIcon
-              link="/menu-mobile"
+              link="/menu"
               img={menu}
             />
           </li>

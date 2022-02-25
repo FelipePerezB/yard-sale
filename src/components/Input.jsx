@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Input.css"
+import "@styles/Input.css"
 
 function Input({children,type}) {
   return (

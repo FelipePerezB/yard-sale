@@ -1,10 +1,12 @@
 import React from 'react'
-import "../styles/Search.css"
+import "@styles/Search.css"
+
+import lens from "@icons/lens.svg"
 
 function Search() {
   return (
     <div className='Search'>
-      <span className='SearchImg' ></span>
+      <img src={lens}  className="Search__img" />
       <input placeholder='Search product...' className='SearchInput' />
     </div>    
   )

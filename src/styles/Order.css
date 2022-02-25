@@ -25,3 +25,8 @@
 .price{
   font-weight: 500;
 }
+
+.order__price{
+  display: flex;
+  align-items: center;
+}

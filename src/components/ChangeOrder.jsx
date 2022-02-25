@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/ChangeOrder.css"
+import "@styles/ChangeOrder.css"
 
 function ChangeOrder() {
   return (

@@ -3,11 +3,12 @@ import Button from '../components/Button'
 import EmailImage from '../components/EmailImage'
 import ResendMessage from '../components/ResendMessage'
 import Information from '../containers/Information'
+import Main from '../containers/Main'
 import Title from '../containers/Title'
 
-function EmailSent() {
+function SendEmail() {
   return (
-    <>
+    <Main>
       <Title/>
       <Information
         title="¡Email has been sent!"
@@ -22,8 +23,8 @@ function EmailSent() {
         aText="Resend"
       />
 
-    </>
+    </Main>
   )
 }
 
-export default EmailSent
+export default SendEmail

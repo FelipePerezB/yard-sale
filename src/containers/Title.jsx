@@ -1,7 +1,7 @@
 import React from 'react'
-import "../styles/Title.css"
+import "@styles/Title.css"
 
-import logo from "../assets/icons/logo.svg"
+import logo from "@icons/logo.svg"
 
 function Title() {
   return (

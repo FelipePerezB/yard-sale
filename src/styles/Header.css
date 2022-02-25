@@ -15,7 +15,7 @@ nav ul{
   box-shadow: 1px 1px 10px lightgrey;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 4vmin;
 }
 
 nav ul li{

@@ -1,7 +1,7 @@
 import React from 'react'
 import InformationText from '../components/InformationText'
 import InformationTitle from '../components/InformationTitle'
-import "../styles/InformationText.css"
+import "@styles/InformationText.css"
 
 function Information({ title,text }) {
   return (

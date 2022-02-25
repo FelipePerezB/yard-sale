@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/HomeProducts.css"
+import "@styles/HomeProducts.css"
 
 function HomeProducts({children}) {
   return (

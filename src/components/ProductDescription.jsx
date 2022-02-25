@@ -1,9 +1,10 @@
 import React from 'react'
-import "../styles/ProductDescription.css"
+import "@styles/ProductDescription.css"
 
-function ProductDescription({price, article,description}) {
+function ProductDescription({img,price, article,description}) {
   return (
     <>
+      <img className='image-article' src={img}/>
       <div className='price-article'>
         <span className='price' >{price}</span>
         <span className='article' >{article}</span>

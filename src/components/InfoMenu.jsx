@@ -1,13 +1,13 @@
 import React from 'react'
-import "../styles/InfoMenu.css"
+import "@styles/InfoMenu.css"
 import Space from "../components/Space"
 
 function InfoMenu({email}) {
   return (
     <>
     <div className='orders-account'>
-      <a>My orders</a>
-      <a>My account</a>
+      <a href='/my-orders'>My orders</a>
+      <a href='/my-account'>My account</a>
     </div>       
     <Space/>
     <div className='account-info'>

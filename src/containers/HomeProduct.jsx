@@ -1,16 +1,17 @@
 import React from 'react'
-import "../styles/HomeProduct.css"
+import "@styles/HomeProduct.css"
+import AddToCart from '../components/AddToCart'
 
 function HomeProduct({img, price, article}) {
   return (
-    <div className='home-product' >
-      <img src={img} />  
+    <a href='/product-info' className='home-product' >
+      <img className='home-product__img' src={img} />  
       <section className='home-product-description' >
         <span className='home-product-price' >{price}</span> 
         <span className='home-product-article' > {article}</span> 
-        <span className='home-product-cart'>Cart</span>
+        <AddToCart/>
       </section>
-    </div>
+    </a>
   )
 }
 

@@ -20,7 +20,7 @@ function PasswordRecovery() {
       <Button>
         Submit
       </Button>
-      <LinkButton href="/">
+      <LinkButton href="/login">
         Back to login
       </LinkButton>
     </Main>

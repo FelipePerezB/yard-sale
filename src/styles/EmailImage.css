@@ -7,4 +7,9 @@
   border-radius: 50%;
   display: flex;
   background-color: #F7F7F7;
+  justify-content: center;
+}
+
+.email-image img{
+  width: 70%;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/NavIcon.css"
+import "@styles/NavIcon.css"
 
 function NavIcon({link,img}) {
   return (

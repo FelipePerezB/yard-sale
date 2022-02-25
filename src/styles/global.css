@@ -1,4 +1,4 @@
-/* Arreglar la scrollvar */
+/* Arreglar la scrollbar */
 
 *{
   box-sizing: border-box;
@@ -28,8 +28,8 @@ button,p,span,a,input{
   font-size: var(--medium-size);
 }
 
-::-webkit-scrollbar{
-  background: none;
+a:hover{
+  color: var(--primary-color-active);
 }
 
 .price{
@@ -41,6 +41,16 @@ button,p,span,a,input{
   font-weight: 300;
 }
 
+*::-webkit-scrollbar{
+  height: 4px;
+  width: 12px;
+  background: rgba(233, 233, 233, 0.462);
+}
+*::-webkit-scrollbar-thumb{
+  height: 4px;
+  background: lightgray;
+  border-radius: 8px;
+}
 
 /* main{
 

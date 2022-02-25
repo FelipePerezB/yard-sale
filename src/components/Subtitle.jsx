@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Subtitle.css"
+import "@styles/Subtitle.css"
 
 function Subtitle({children}) {
   return (

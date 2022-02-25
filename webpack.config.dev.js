@@ -16,7 +16,9 @@ module.exports={
             ".jsx"
         ],
         alias:{
-            "@styles": path.resolve(__dirname, "./src/styles")
+            "@styles": path.resolve(__dirname, "./src/styles"),
+            "@icons": path.resolve(__dirname, "./src/assets/icons"),
+            "@images": path.resolve(__dirname, "./src/assets/images")
         }
     },
     module:{
@@ -44,7 +46,7 @@ module.exports={
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                type: "asset"
+                type: "asset/resource"
             },
         ]
     },

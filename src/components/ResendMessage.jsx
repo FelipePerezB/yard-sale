@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/ResendMessage.css"
+import "@styles/ResendMessage.css"
 
 function ResendMessage({spanText, aText}) {
   return (

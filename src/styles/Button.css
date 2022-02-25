@@ -1,5 +1,8 @@
 .button, .button-white{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   border-radius: var(--form-radious);
   background-color: var(--primary-color);
   width: 100%;
@@ -21,6 +24,15 @@
   background-color: white;
   border: var(--primary-color) 2px solid;
   color: var(--primary-color);
+}
+
+.button-white:hover{
+  border: var(--primary-color-active) 2px solid;
+  color: var(--primary-color-active);
+}
+
+.button-white:active{
+  background-color: var(--form-color);
 }
 
 .drop-button{
