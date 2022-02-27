@@ -19,6 +19,7 @@ function Header() {
         <ul>
           <li className='menu-container'>
             <NavIcon
+              alt={"go to the menu"}
               link="/menu"
               img={menu}
             />
@@ -33,11 +34,12 @@ function Header() {
             <div className='deploy-menu'>
               <div className="nav-email" >
                 felipeeperez3@gmail.com
-                <img src={arrow}/>
+                <img alt='show menu options' src={arrow}/>
               </div>
               <NavMenu/>
             </div>
             <NavIcon
+                alt={"go to the shopping cart"}
                 link="/shopping-cart"
                 img={cart}
               />

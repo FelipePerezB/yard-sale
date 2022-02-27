@@ -1,9 +1,30 @@
 import React from 'react'
 import "@styles/Button.css"
+import useReedirect from '../hooks/useReedirect'
 
-function Button({children, type="button"}) {
+// const reedirect=(m)=>{
+//   console.log(m)
+// }
+
+const createId=()=>{
+  console.log("hola")
+}
+
+function Button(
+  {
+    children, 
+    buttonFunction, 
+    type="button", 
+    buttonClass="button",
+  }){
+
   return (
-    <button className={ type }>{children}</button>    
+    <button
+      onClick={ buttonFunction }
+      type={type}  
+      className={ buttonClass }>
+        {children}
+    </button>    
   )
 }
 

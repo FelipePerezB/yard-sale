@@ -14,7 +14,7 @@ function Order({children,date,numberOfArticles,price}) {
         </div>
         <div className='order__price'>
           <span className='price'>{price}</span>
-          <img src={arrow}/>
+          <img alt='show products' src={arrow}/>
         </div>
       </div>
       <div className='order-products'>

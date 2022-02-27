@@ -21,8 +21,8 @@ function ProductInfo() {
         "
       />
       <Space/>
-      <Button type='button drop-button'>
-        <img src={cart} />
+      <Button buttonClass='button drop-button'>
+        <img alt='cart icon' src={cart} />
         Add to the cart
       </Button>
 

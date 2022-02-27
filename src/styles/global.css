@@ -20,8 +20,12 @@
 }
 body{
   font-family: "quicksand";
-  /* min-height: 100vh;
-  position: relative; */
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 button,p,span,a,input{

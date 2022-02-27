@@ -13,7 +13,12 @@ module.exports={
         extensions:[
             ".js",
             ".jsx"
-        ]
+        ],
+        alias:{
+            "@styles": path.resolve(__dirname, "./src/styles"),
+            "@icons": path.resolve(__dirname, "./src/assets/icons"),
+            "@images": path.resolve(__dirname, "./src/assets/images")
+        }
     },
     module:{
         rules:[

@@ -13,14 +13,8 @@
   }
 }
 
-/* @media (min-width:900px){
-  .home-products{
-    grid-template-columns: repeat(auto-fill, minmax(13rem, 20%));
-    grid-auto-rows: minmax(16rem, auto);
+@media (min-width:900px){
+  .search-components{
+    width: 100%;
   }
-  .home-product{
-    padding: 24px;
-    width: 20vw;
-    max-width: 15rem;
-  }
-} */
+}

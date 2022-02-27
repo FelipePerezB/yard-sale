@@ -9,17 +9,8 @@
   align-items: center;
 }
 
-.add-button img{
-  position: absolute;
-  opacity: 1;
-}
-
-.add-button input:checked + img{
-  opacity: 1;
-}
-
 .add-button .added-image{
-  opacity: 0;
+  position: absolute;
   z-index: 1;
 }
 

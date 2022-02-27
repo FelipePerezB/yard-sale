@@ -1,13 +1,16 @@
 .title{
   font-weight: 700;
-  margin: auto;
-  width: 100%;
+  /* margin: auto; */
+  /* width: min-content; */
+  display: flex;
   height: auto;
   margin: 8vh 0 calc(8vh - 1.2rem);
-  display: flex;
   align-items: baseline;
   justify-content: center;
   gap: .8rem;
+  overflow: hidden;
+
+
 }
 
 .title__text, .title__text--active{
@@ -19,6 +22,9 @@
 }
 
 .title__logo{
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 1/1;
   height: 2rem;
 }
 

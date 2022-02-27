@@ -7,12 +7,12 @@ function Product({type="product",img,article,price}) {
   return (
     <div className={type}>
       <div className='description'>
-        <img src={img}/>
+        <img src={img} alt={article}/>
         <span className='article'>{article}</span>
       </div>
       <div>
         <span className='price'>{price}</span>
-        <img className='x' src={x} />
+        <img alt='delete product' className='x' src={x} />
       </div>
       <input type="checkbox"/>
       <div className='deleted'>

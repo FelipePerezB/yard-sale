@@ -24,7 +24,7 @@ function MyAccount() {
           Password
         </Input>
         <Space/>
-        <Button type='button drop-button'>
+        <Button buttonClass='button drop-button'>
           Save
         </Button>
       </Main>

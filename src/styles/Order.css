@@ -11,7 +11,7 @@
 
 .order-selected{
   position: absolute;
-  width: 100%;
+  width: 94%;
   height: 4rem;
   opacity: 0;
   cursor: pointer;
@@ -28,6 +28,10 @@
 .order-selected:checked ~ .order-products{
   transition: height 1s;
   height: calc(15rem);
+}
+
+.order-selected:hover + .order{
+  background-color: lightgray;
 }
 
 .order div:nth-child(1){

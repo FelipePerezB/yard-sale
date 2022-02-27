@@ -6,7 +6,7 @@ import lens from "@icons/lens.svg"
 function Search() {
   return (
     <div className='Search'>
-      <img src={lens}  className="Search__img" />
+      <img alt='search icon' src={lens}  className="Search__img" />
       <input placeholder='Search product...' className='SearchInput' />
     </div>    
   )

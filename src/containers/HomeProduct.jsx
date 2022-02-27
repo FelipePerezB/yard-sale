@@ -5,7 +5,7 @@ import AddToCart from '../components/AddToCart'
 function HomeProduct({img, price, article}) {
   return (
     <a href='/product-info' className='home-product' >
-      <img className='home-product__img' src={img} />  
+      <img className='home-product__img' src={img} alt={article} />  
       <section className='home-product-description' >
         <span className='home-product-price' >{price}</span> 
         <span className='home-product-article' > {article}</span> 

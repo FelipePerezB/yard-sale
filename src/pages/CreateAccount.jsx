@@ -3,6 +3,7 @@ import Button from '../components/Button'
 import Input from '../components/Input'
 import Title from '../containers/Title'
 import Main from "../containers/Main"
+import useReedirect from '../hooks/useReedirect'
 
 function CreateAccount() {
   return (
@@ -17,7 +18,7 @@ function CreateAccount() {
       <Input>
         Password
       </Input>
-      <Button>
+      <Button buttonFunction={()=>{useReedirect("/")}} >
         Create account
       </Button>
     </Main>

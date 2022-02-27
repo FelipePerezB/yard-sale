@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../components/Button'
 import "@styles/CartCount.css"
+import useReedirect from '../hooks/useReedirect'
 
 function CartCount({price}) {
   return (
@@ -9,7 +10,7 @@ function CartCount({price}) {
         <span>Total</span>
         <span className='price'>{price}</span>
       </div>
-      <Button>
+      <Button buttonFunction={useReedirect} parameter="/my-orders" >
         Checkout
       </Button>
     </section>   
