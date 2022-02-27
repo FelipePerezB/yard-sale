@@ -14,6 +14,10 @@ function Product({type="product",img,article,price}) {
         <span className='price'>{price}</span>
         <img className='x' src={x} />
       </div>
+      <input type="checkbox"/>
+      <div className='deleted'>
+        <span>Removed from the cart</span>
+      </div>
     </div>    
   )
 }

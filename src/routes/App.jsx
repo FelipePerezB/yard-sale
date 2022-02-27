@@ -12,6 +12,7 @@ import PasswordRecovery from '../pages/PasswordRecovery'
 import ProductInfo from '../pages/ProductInfo'
 import ShoppingCart from '../pages/ShoppingCart'
 import "@styles/global.css"
+import NotFound from '../pages/NotFound'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/my-orders' element={<MyOrders />} />
           <Route path='/menu' element={<MobileMenu />} />
           <Route path='/product-info' element={<ProductInfo />} />
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
     </BrowserRouter>    
   )

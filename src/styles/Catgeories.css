@@ -44,3 +44,9 @@
   color: black;
   font-weight: 500;
 }
+
+@media (min-width:550px){
+  .categories{
+    margin: 0;
+  }
+}

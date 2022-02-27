@@ -1,46 +1,21 @@
-/* header{
-  position: absolute;
-
-} */
-
 nav ul{
   z-index: 1;
-  height: 3.5rem;
   background-color: white;
   position: fixed;
-  left: 0;
-  top: 0;
+  height: 3.5rem;
   width: 100vw;
   display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3.5rem; */
   box-shadow: 1px 1px 10px lightgrey;
   justify-content: space-between;
   align-items: center;
-  padding: 4vmin;
+  padding: 0 4vmin;
 }
 
-nav ul li{
+nav li{
   list-style: none;
 }
-
-/* .nav__cart{
-  width: 1.6rem;
-  height: 1.6rem;
-} */
-
-/* .nav__menu{
-  width: 2rem;
-  height: 2rem;
-} */
-/* 
-nav .menu-icon, .cart-icon{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-
-} */
 
 nav .title__text, nav .title__text--active{
   font-size: 1.6rem;
@@ -48,12 +23,72 @@ nav .title__text, nav .title__text--active{
 
 nav .title{
   align-items: center;
-  /* height: max-content; */
   margin: 0;
-  
 }
 
-/* nav .title__logo{
-  width: 1.2rem;
-  height: 1.2rem;
-} */
+.title-categories-container{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.title-categories-container .title__text{
+  color: black;
+}
+
+nav .categories{
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  display: none;
+}
+
+.account-cart-container{
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.account-cart-container .nav-email{
+  display: none;
+  cursor: pointer;
+}
+
+.deploy-menu:hover img{
+  transform: rotate(90deg);
+  transition: transform .5s;
+}
+
+nav .nav-email img{
+  transition: transform 1.5s;
+}
+
+nav .nav-email:hover + div{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms ease-in;
+}
+nav .nav-email + div:hover{
+  visibility: visible;
+  transition: opacity 1.5s ease-in;
+  opacity: 1;
+}
+
+@media (min-width: 550px) {
+  .menu-container{
+    display: none;
+  }
+
+  .account-cart-container .nav-email{
+    display: flex;
+  }
+}
+@media (min-width: 900px) {
+  .categories{
+    display: none;
+  }
+  nav .categories{
+    width: 500%;
+    display: block;        
+  }
+}

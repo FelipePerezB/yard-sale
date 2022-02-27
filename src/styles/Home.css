@@ -1,0 +1,26 @@
+@media (min-width:550px){
+  .search-components{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 22rem;
+    margin: 0 auto;
+  }  
+
+  .home-product{
+    padding: 12px;
+    margin: 0;
+  }
+}
+
+/* @media (min-width:900px){
+  .home-products{
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 20%));
+    grid-auto-rows: minmax(16rem, auto);
+  }
+  .home-product{
+    padding: 24px;
+    width: 20vw;
+    max-width: 15rem;
+  }
+} */

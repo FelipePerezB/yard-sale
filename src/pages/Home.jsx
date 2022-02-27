@@ -6,6 +6,7 @@ import Search from '../components/Search'
 import Header from '../containers/Header'
 import HomeProducts from '../containers/HomeProducts'
 import Main from '../containers/Main'
+import "@styles/Home.css"
 
 import boat from "@images/boat.jpg"
 
@@ -13,13 +14,63 @@ function Home() {
   return (
     <>
       <Header/>
-      <Main type='main-header'>
-        <section>
+      <Main type='main-header main-pc'>
+        <section className='search-components'>
           <Search/>
           <Categories/>
           <ChangeOrder/>
         </section>
         <HomeProducts>
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
+          <HomeProduct
+            img={boat}
+            price="$120.00"
+            article="boat"
+          />
           <HomeProduct
             img={boat}
             price="$120.00"

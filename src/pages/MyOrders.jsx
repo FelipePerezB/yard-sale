@@ -11,29 +11,57 @@ function MyOrders() {
     <>
       <Header/>
       <Main type='main-header'>
-      <Order
-        date="27.2.2020"
-        numberOfArticles="2 articles"
-        price="$500.00"
-      />
-      <Product
-        img={boat}
-        type="product-order"
-        article="Boat"
-        price="$120.00"
-      />
-      <Product
-        img={boat}
-        type="product-order"
-        article="Boat"
-        price="$120.00"
-      />
-      <Product
-        img={boat}
-        type="product-order"
-        article="Boat"
-        price="$120.00"
-      />
+        <section>
+
+          <Order
+            date="27.2.2020"
+            numberOfArticles="2 articles"
+            price="$500.00"
+          >
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+          </Order>
+          <Order
+            date="27.2.2020"
+            numberOfArticles="2 articles"
+            price="$500.00"
+          >
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+            <Product
+              img={boat}
+              type="product-order"
+              article="Boat"
+              price="$120.00"
+            />
+          </Order>
+        </section>
       </Main>
     </>
   )

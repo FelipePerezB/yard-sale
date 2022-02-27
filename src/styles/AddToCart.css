@@ -9,7 +9,30 @@
   align-items: center;
 }
 
+.add-button img{
+  position: absolute;
+  opacity: 1;
+}
+
+.add-button input:checked + img{
+  opacity: 1;
+}
+
+.add-button .added-image{
+  opacity: 0;
+  z-index: 1;
+}
+
 .add-button:hover{
   cursor: pointer;
   background-color: var(--primary-color-active);
+}
+
+.add-button input{
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  width: 2.2rem;
+  height: 2.2rem;
 }
