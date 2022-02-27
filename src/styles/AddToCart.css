@@ -9,11 +9,6 @@
   align-items: center;
 }
 
-.add-button .added-image{
-  position: absolute;
-  z-index: 1;
-}
-
 .add-button:hover{
   cursor: pointer;
   background-color: var(--primary-color-active);

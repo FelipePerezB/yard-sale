@@ -15,7 +15,7 @@
 }
 
 .home-product:hover{
-  background-color: gainsboro;
+  background-color: var(--form-color);
   cursor: pointer;
   color: black;
 }
