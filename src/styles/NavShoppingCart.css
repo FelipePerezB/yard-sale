@@ -1,0 +1,35 @@
+.nav-shopping-cart .products{
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 10em);
+  overflow-x: hidden;
+}
+
+.nav-shopping-cart-container .cart-count{
+  padding-top: 16px;
+  background-color: white;
+}
+
+.nav-shopping-cart{
+  /* width: 100%; */
+  border-radius: var(--form-radious);
+  /* max-width: 0; */
+  width: 0;
+  height: calc(100vh - 3.6rem);
+  background-color: white;
+  /* overflow-y: scroll; */
+  overscroll-behavior-x: contain;
+  box-shadow: -2px -2px 4px lightgray;
+  padding: 2vw;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 2s, max-width 2s, opacity 2s;
+}
+
+@media (max-width:550px){
+  .nav-shopping-cart{
+    display: none;
+  }
+}

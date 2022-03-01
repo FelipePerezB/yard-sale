@@ -1,29 +1,33 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "@styles/AddToCart.css"
 
 import add from "@icons/add-to-shopping-cart.svg"
 import added from "@icons/added.svg"
+import AppContext from '../context/AppContext'
 
-let n = 0
-let id=0
+function AddToCart({product}) {
+  const { addToCartFunction, deleteToCartFunction, isInTheCart } = useContext(AppContext)
 
-function AddToCart() {
-  const [icon, addedToTheCart] = useState(false)
-  const handleToggle = () =>{
-    (icon) ? n-=1 : n+=1
-    console.log(n)
-    addedToTheCart(!icon)
-  } 
-  id+=1
+  const AddToCartButton = (product)=>{
+    if(isInTheCart(product.id)){
+      deleteToCartFunction(product.id)      
+    } else{
+      addToCartFunction(product)
+    }
+  }
 
   return (
     <div className='add-button'>
-      <label htmlFor={"add-to-cart-"+id}>{""}</label>
-        <input id={"add-to-cart-"+id} type="checkbox" onClick={handleToggle}/>
+      <label htmlFor={"add-to-cart-"+product.id}>{""}</label>
+        <input 
+        id={"add-to-cart-"+product.id} 
+        type="checkbox" 
+        onClick={()=>AddToCartButton(product)}/>
+
       <img 
         alt='add to the shopping cart'
         className='add-image'
-        src={icon ? added : add}
+        src={isInTheCart(product.id) ? added : add}
       />
     </div>   
   )

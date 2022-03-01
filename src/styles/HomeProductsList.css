@@ -11,6 +11,23 @@
   .home-products{
     grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
   }
+
+  .blur{
+    visibility: hidden;
+    position: fixed;
+    top: .6rem;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 2s;
+    height: calc(100vh);
+  }
+
+  .blur-active{
+    visibility: visible;
+    background-color: #808080a3;
+    transition: background-color 1s;
+  }
 }
 
 @media (min-width:900px) {

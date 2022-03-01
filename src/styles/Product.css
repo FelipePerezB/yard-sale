@@ -4,6 +4,17 @@
   height: max-content;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+.product{
+  padding-bottom:8px;
+  padding-top:8px;
+  border-radius: var(--form-radious);
+}
+
+.product:hover{
+  background-color: lightgray;
 }
 
 .product-order input, .product-order .deleted{
@@ -15,9 +26,15 @@
   width: 1.6rem;
   height: 1.6rem;
   opacity: 0;
+  /* top: .5rem; */
   position: absolute;
-  right: 1rem;
   z-index: 100;
+
+}
+
+.delete-product{
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .product input:checked + .deleted{
@@ -43,14 +60,16 @@
 }
 
 .description img{
-  width: 3.6rem;
+  width: 3.2rem;
+  height: 3rem;
   border-radius: var(--form-radious);
 }
 
 .product div, .product-order div{
   display: flex;
   align-items: center;
-  gap: .8rem;
+  justify-content: end;
+  gap: .4rem;
 }
 
 .product-order .x{

@@ -6,7 +6,7 @@ module.exports={
     output:{
         path:path.resolve(__dirname,"dist"),
         filename:"bundle.js",
-        publicPath:"/",
+        publicPath:"./",
         assetModuleFilename: "assets/images/[hash][ext][query]"
     },
     mode:"development",
@@ -46,7 +46,10 @@ module.exports={
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                type: "asset/resource"
+                type: "asset/resource",
+                generator: {
+                    filename: "public/[hash][ext]",
+                  },
             },
         ]
     },
