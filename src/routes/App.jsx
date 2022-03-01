@@ -24,7 +24,7 @@ function App() {
 
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter basename='/dist/'>
+      <BrowserRouter basename='/'>
           <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/create-account' element={<CreateAccount />} />

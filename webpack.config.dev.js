@@ -6,7 +6,7 @@ module.exports={
     output:{
         path:path.resolve(__dirname,"dist"),
         filename:"bundle.js",
-        publicPath:"./",
+        publicPath:"/",
         assetModuleFilename: "assets/images/[hash][ext][query]"
     },
     mode:"development",
@@ -16,9 +16,9 @@ module.exports={
             ".jsx"
         ],
         alias:{
-            "@styles": path.resolve(__dirname, "./src/styles"),
-            "@icons": path.resolve(__dirname, "./src/assets/icons"),
-            "@images": path.resolve(__dirname, "./src/assets/images")
+            "@styles": path.resolve(__dirname, "src/styles"),
+            "@icons": path.resolve(__dirname, "src/assets/icons"),
+            "@images": path.resolve(__dirname, "src/assets/images")
         }
     },
     module:{

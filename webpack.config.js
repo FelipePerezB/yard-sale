@@ -3,12 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const miniCssExtractPlugin=require("mini-css-extract-plugin")
 module.exports={
     entry:"./src/index.js",
-    mode:"production",
     output:{
         path:path.resolve(__dirname,"dist"),
         filename:"bundle.js",
-        publicPath:"/"
+        publicPath:"./",
+        assetModuleFilename: "assets/images/[hash][ext][query]"
     },
+    mode:"production",
     resolve:{
         extensions:[
             ".js",
@@ -44,8 +45,11 @@ module.exports={
                 ]
             },
             {
-                test:/\.(png|svg|jpg|jpeg|gif)$/,
-                type:"asset"
+                test: /\.(png|svg|jpg|gif)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "public/[hash][ext]",
+                  },
             },
         ]
     },
@@ -59,13 +63,17 @@ module.exports={
         })
         
     ],
-    // devServer:{
-    //     port:3006,
-    //     compress:true,
-    //     open:true,
-    //     static:{
+    devServer:{
+        historyApiFallback:true,
+        static: {
+            directory: path.join(__dirname, 'public'),
+            },
+        port:3002,
+        compress:true,
+        open:true,
+        static:{
 
-    //     }
-    // }
+        }
+    }
 
 }
