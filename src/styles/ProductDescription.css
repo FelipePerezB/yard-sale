@@ -1,8 +1,0 @@
-.price-article{
-  display: flex;
-  flex-direction: column;
-}
-
-.image-article{
-  border-radius: var(--form-radious);
-}
