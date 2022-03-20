@@ -7,7 +7,7 @@ import AppContext from '../context/AppContext'
 import useCheckout from '@hooks/useCheckout'
 
 function CartCount() {
-  const {state, setOrder} = useContext(AppContext)
+  const {state, setOrder, changeCartVisibility} = useContext(AppContext)
   const cart = state.cart
   let finalPrice=0
   if(cart.length > 0){
@@ -17,13 +17,15 @@ function CartCount() {
 
   function Checkout(){
     setOrder(state.cart)
+    changeCartVisibility()
+
   }
 
   return (
     <section className={styles['cart-count']} >
       <div className={styles['count']}>
         <span>Total</span>
-        <span className={styles['price']}>{"$"+finalPrice}</span>
+        <span className='price'>{"$"+finalPrice}</span>
       </div>
       <Button buttonClass="button" buttonFunction={()=>(Checkout())} url={"/yard-sale/MyOrders"}>
         Checkout

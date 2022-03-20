@@ -21,7 +21,6 @@ class Validation{
     } else{
       value.problems.push("El valor no puede ser indefinido")
     }
-    // console.log(value)
     return value
   }
   static problemDescription({type, value}){
@@ -189,8 +188,5 @@ class Validation{
 }
 
 export default Validation
-
-// const email = Validation.validate({email:"ssaasas@"})
-// console.log(email)
 
 

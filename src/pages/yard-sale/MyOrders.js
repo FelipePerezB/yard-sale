@@ -16,7 +16,6 @@ function MyOrders() {
         {(!orders[0]) ? <Warning text="No has hecho ninguna orden." instruction="Presiona 'Checkout' en el carro de compras para hacer una."/> : null}
         <section>
           {orders.map((order)=>{
-            console.log(order)
             return <Order order={order}/>}
           )}
         </section>

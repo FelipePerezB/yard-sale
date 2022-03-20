@@ -31,10 +31,11 @@ function Product({type="product",product}) {
             <Image 
               alt='delete product' className={styles['x-image']} 
               src={x} 
+              onClick={()=>handleToggle(product)}
             />
-            <input type="checkbox"
-              onClick={()=>handleToggle(product)} 
-            />
+            {/* <input type="checkbox"
+              
+            /> */}
           </div>
         </div>
       {/* <div className={styles[]}'deleted'>

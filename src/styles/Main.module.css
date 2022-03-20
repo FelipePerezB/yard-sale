@@ -15,28 +15,43 @@
 }
 
 .main-home-open{
-  margin-right: auto;
-  transition: margin-right 1.5s;
+  margin-right: 100vw;
+  overflow-y: hidden;
+}
+
+.main-home-open-left{
+  margin-left: 100vw;
+}
+
+.main-pc, .main-home-open, .main-home-open-left{
+  display: block;
+  padding: 0;
+  transition: margin-right 1.5s, margin-left 1.5s;;
+  max-width: none;
+  overflow-x: hidden;
 }
 
 @media (min-width: 550px){
   .main-pc, .main-home, .main-home-open{
-    /* background-color: lightgray; */
     max-width: none;
     margin-right: 0;
     transition: margin-right 1.5s;
   }
   .main-home-open{
-    margin-right: 35vw;
+    margin-right: 40vw;
     transition: margin-right 1s;
+  }
+  .main-home-open-left{
+    margin: 0;
   }
 }
 
-@media(min-width:750px){
+@media(min-width:900px){
   .main-home-open{
+    margin-right: 25vw;
     /* background-color: aqua; */
-    margin-right: 20rem;
+    /* margin-right: 20rem; */
     /* margin-right: 40vw; */
-    transition: margin-right 1s;
+    /* transition: margin-right 1s; */
   }  
 }

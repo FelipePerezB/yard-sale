@@ -9,7 +9,7 @@ function InfoMenu({email}) {
       <a href='/yard-sale/my-orders'>My orders</a>
       <a href='/yard-sale/my-account'>My account</a>
     </div>       
-    <Space/>
+    {/* <Space/> */}
     <div className={styles['account-info']}>
       <span>{email}</span>
       <a href='/yard-sale/login' >Sign out</a>

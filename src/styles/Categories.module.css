@@ -12,7 +12,7 @@
 
 .categories{
   margin: .6rem auto 8px;
-  
+  display: none;
 }
 
 .categories span{
@@ -23,12 +23,18 @@
   text-decoration: none;
 }
 
-.categories label{
+.categories-mobile span{
+  padding: 3px;
+  color: black;
+  font-weight: 500;
+}
+
+.categories label, .categories-mobile label{
   width: max-content;
   position: relative;
 }
 
-.categories input{
+.categories input, .categories-mobile input{
   opacity:0;
   width: 100%;
   height: 100%;
@@ -36,33 +42,31 @@
   cursor: pointer;
 }
 
-.categories input:checked + span, .categories span:active{
+.categories input:checked + span, .categories span:active, .categories-mobile input:checked + span, .categories-mobile span:active{
   color: var(--primary-color);
   outline: 1px solid var(--primary-color);
   border-radius: var(--form-radious);
 }
-.categories input:hover + span{
+.categories input:hover + span, .categories-mobile input:hover + span{
   color: var(--primary-color);
 }
 
-.categories span:hover{
+/* .categories span:hover, .categories-mobile span:hover{
   border-radius: var(--form-radious);
   outline: 1px solid var(--primary-color);
-}
+} */
 
 .categories-mobile{
   flex-direction: column;
   align-items: flex-start;
   border-bottom: 1px rgba(211, 211, 211, 0.319) solid;
+  max-width: none;
   padding: 0 0 16px;
-  overflow: hidden;
+  overflow: visible;
+  margin: 0;
 }
 
-.categories-mobile a{
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
+
 
 nav .categories{
   margin: 0;
@@ -72,14 +76,14 @@ nav .categories{
 }
 
 @media (min-width:550px){
-  /* .categories{
-    margin: 0;
-  } */
+  .categories{
+    display: block;
+  }
   
 }
 @media (min-width: 900px) {
   .categories{
-    display: none;
+    display: flex;
   }
   nav .categories{
     width: 500%;

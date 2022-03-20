@@ -13,10 +13,6 @@ function Button(
     type="button", 
     buttonClass,
   }){
-    // const actualUrl= getUrl()
-    // url=actualUrl
-    // console.log(window)
-    // console.log(window.location)
     (url!==undefined)
       ? url
       : useRouter().pathname

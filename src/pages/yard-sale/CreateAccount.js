@@ -10,7 +10,7 @@ import Validation from '@hooks/validations/useValidation.mjs'
 
 
 function CreateAccount() {
-  const { setUser, state } = useContext(AppContext)
+  const { state,setUser, createAccount } = useContext(AppContext)
 
   let nameErrors=""
   let emailErrors=""
@@ -94,50 +94,19 @@ function CreateAccount() {
         ? desactiveError("Password", validatePassword.text,setPasswordErrors)
         : activeInputError("Password", validatePassword.problems, setPasswordErrors),
     })
+    
 
     if(correctInputs===3){
       const errorsParagraph = document.getElementById("errors-p")
       errorsParagraph.innerText=``
+      setUser({
+        userName:data.name,
+        email:data.email,
+        password:data.password,
+      }, true)
       router.push("/yard-sale/")      
     }
 
-    // const user = state.user
-    // console.log(user)
-
-    // if(state.user.isUserCreated){
-    //   router.push("/yard-sale/")
-    // }
-    // console.log(state.user.isUserCreated)
-    // {
-    //   (validateName.problems===undefined)
-    //   ? setUser({userName:data.name})
-    //   : console.log(validateName.problems)
-    // }
-    // {
-    //   (validatePassword.problems===undefined)
-    //   ? setUser({password:data.password})
-    //     : console.log(validatePassword.problems)
-    // }
-    // {
-    //   (validateEmail.problems===undefined)
-    //     ? setUser({email:data.email})
-    //     : console.log(validateEmail.problems)
-    // }
-    // console.log(validateName.text + " " + validatePassword.text)
-    // console.log(state.user)
-    
-    
-    // if(validateEmail.problems===undefined){
-    //   // setUser({
-      //   //   userName:data.name,
-    //   //   email:data.email,
-    //   //   password:data.password,
-    //   // })
-    // } else{
-    //   console.log(validateEmail.problems)
-    // }
-    // console.log(Validation.validate({email:data.email}))
-    // router.push("/yard-sale/")
   }
   const inputs = [
     {
@@ -167,15 +136,6 @@ function CreateAccount() {
           {input.name}
         </Input>
       ))}
-        {/* <Input type="text" id={"name"} name='name' >
-          Name
-        </Input>  
-        <Input type="email" id={"email"} name='email'>
-          Email address
-        </Input>
-        <Input type="password" id={"password"} name='password'>
-          Password
-        </Input> */}
         <p id='errors-p'></p>
         <Button buttonClass="button"  buttonFunction={handleSubmit} type={"submit"} url="/yard-sale/">
           Create account

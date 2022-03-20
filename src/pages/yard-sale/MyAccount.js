@@ -7,6 +7,7 @@ import Main from '@containers/Main'
 import Space from "@components/Space"
 import AppContext from '@context/AppContext'
 import Validation from '@hooks/validations/useValidation.mjs'
+import Head from 'next/head'
 
 function MyAccount() {
   const {setUser, state} = useContext(AppContext)
@@ -97,8 +98,6 @@ function MyAccount() {
         : activeInputError("Password", validatePassword.problems, setPasswordErrors, password),
     })
 
-    console.log(state.user)
-
     if(correctInputs === 3 || inputState){
       const errorsParagraph = document.getElementById("errors-p")
 
@@ -128,6 +127,9 @@ function MyAccount() {
 
   return (
     <div  onLoad={()=>setInputs()}>
+      <Head>
+        <title>My account | Yard Sale</title>
+      </Head>
       <Header/>
       <Main type='main-header'>
         <Subtitle>

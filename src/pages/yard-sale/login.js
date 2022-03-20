@@ -6,11 +6,30 @@ import Space from '@components/Space'
 import Title from '@containers/Title'
 import Main from "@containers/Main"
 import AppContext from '@context/AppContext'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 // import styles from "../styles/global.css"
 
 function Login() {
-  const { setUser, state } = useContext(AppContext)
+  const { state, setUser } = useContext(AppContext)
   const form = useRef(null)
+
+  const router = useRouter()
+
+  const login = (user) => {
+    setUser({
+      userName:user.userName,
+      email:user.email,
+      password:user.password,
+    })    
+    router.push("/yard-sale/") 
+  }
+
+  const error = (error) =>{
+    const errorsParagraph = document.getElementById("errors-p")
+    errorsParagraph.innerText= `-${error}.`
+
+  }
 
   const handleSubmit = (event) =>{
     event.preventDefault()
@@ -19,15 +38,24 @@ function Login() {
       email: formData.get("email"),
       password: formData.get("password")
     }
-    setUser({
-      email:data.email,
-      password:data.password
-    })
-    console.log(state.user)
+
+    const userIndex=(state.users.findIndex((user)=>user.email===data.email))
+    const user=state.users[userIndex]
+    {
+      (userIndex !== -1) 
+        ? (user.password===data.password)
+          ? login(user)
+          : error("La contraseña es incorrecta")
+        
+        : error("No se ha encontrado el correo, para crear una cuenta presione 'Sign up'")
+    }
   }
 
   return (
     <>
+      <Head>
+        <title>Log in | Yard Sale</title>
+      </Head>
       <Main>
         <Title />
 
@@ -45,6 +73,7 @@ function Login() {
           <LinkButton href="/yard-sale/PasswordRecovery">
             Forgot my password
           </LinkButton>
+          <p id='errors-p'></p>
 
           <Space/>
           <Button url='/yard-sale/CreateAccount' buttonClass='drop-button-white'>

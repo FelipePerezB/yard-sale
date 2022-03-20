@@ -89,7 +89,7 @@
   position: relative;
 }
 
-.cartIcon-count p{
+.cartIcon-count > p{
   text-align: end;
   width: .9rem;
 }
@@ -126,12 +126,16 @@
 }
 
 
+.account-container{
+  display: none;
+}
+
 /* .nav-shopping-cart *{
   position: relative;  
 } */
 
 @media (min-width: 550px) {
-  .menu-container{
+  .menu-icon{
     display: none;
   }
 
@@ -139,6 +143,9 @@
     display: flex;
   }
   .active-cart{
+    display: block;
+  }
+  .account-container{
     display: block;
   }
 }

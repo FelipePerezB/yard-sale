@@ -6,7 +6,7 @@ import Image from 'next/image'
 function EmailImage() {
   return (
     <div className={styles['email-image']}>
-      <Image src={email} alt={"email image"}/>      
+      <Image width={150} src={email} alt={"email image"}/>      
     </div>    
   )
 }

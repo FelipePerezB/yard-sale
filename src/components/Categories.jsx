@@ -3,7 +3,7 @@ import React, {useContext} from 'react'
 import styles from "../styles/Categories.module.css"
 
 function Categories({type="categories"}) {
-  const {state, setHomeProductCategory} = useContext(AppContext)
+  const {state, changeMenuVisibility, setHomeProductCategory} = useContext(AppContext)
   const categories = ["Clothes","Electronics", "Furniture","Toys", "Others"]
 
 
@@ -15,6 +15,7 @@ function Categories({type="categories"}) {
           id={"All"} 
           value={"All"} 
           name={"categories"} 
+          onClick={()=>changeMenuVisibility()}
           onChange={()=>setHomeProductCategory("All")}
           type={"radio"}
         />
@@ -23,6 +24,7 @@ function Categories({type="categories"}) {
       {categories.map((category)=>(
         <label htmlFor={category} key={category}>
           <input 
+            onClick={()=>changeMenuVisibility()}
             id={category} 
             value={category} 
             name={"categories"} 

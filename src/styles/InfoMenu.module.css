@@ -13,8 +13,8 @@
 }
 
 .account-info{
-  position: absolute;
-  bottom: 1.2rem;
+  position: relative;
+  bottom: 0;
 }
 
 .account-info a, .account-info span{

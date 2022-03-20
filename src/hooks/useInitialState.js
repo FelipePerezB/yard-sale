@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 const initialState = {
+  newUsers:[],
   homeProductsCategory:"All",
-  user:{},
   cart:[],
   orders:[],
-  navCartIsOpen:false
+  user:{},
+  navCartIsOpen:false,
+  menuIsOpen:false
 }
 
 const useInitialState = () =>{
@@ -16,54 +18,39 @@ const useInitialState = () =>{
       ...state,
       homeProductsCategory:category
     })
-    console.log(category)
   }
 
-  const setUser = ({email,password,userName}) =>{
-    // console.log(state.user)
-    // if(email){
-    //   setState({
-    //     ...state,
-    //     user:{
-    //       ...state.user,
-    //       email:email
-    //     }
-    //     })
-    // } else if(password){
-    //   setState({
-    //     ...state,
-    //     user:{
-    //       ...state.user,
-    //       password:password
-    //     }
-    //     })
-    // }
-    // if(userName){
-    //   setState({
-    //     ...state,
-    //     user:{
-    //       ...state.user,
-    //       userName:userName
-    //     }
-    //     })
-    // }
-
+  const setUser = ({email,password,userName}, bool=false) =>{
     setState({
       ...state,
       user:{
-        // name: (userName) ? userName : state.user.name,
-        // email: (email) ? email : state.user.email,
-        // password: (password) ? password : state.user.password,
         userName:userName,
         email:email,
         password:password,
-        // isUserCreated:(state.user.userName!==undefined && state.user.email!==undefined && state.user.password!==undefined) ? true : false
-      }
+      },
     })
-
+    if(bool){
+      const newUser = {
+        userName:userName,
+        email:email,
+        password:password
+      }
+      state.newUsers.push(newUser)
+    }
   }
 
-  // const [isVisible, showShoppingCart] = useState(false)
+  console.log(state)
+  
+    // const createAccount = (newUser) =>{
+    //   setState({
+    //     ...state,
+    //     newUsers:[
+    //       ...state.newUsers,
+    //       newUser        
+    //     ],
+    //   })
+    // }
+
 
   const addToCartFunction = (payload) =>{
     setState({
@@ -80,11 +67,20 @@ const useInitialState = () =>{
 
   const changeCartVisibility = (canOpenAgain=true) => {
     const visiibility=(canOpenAgain) ? !state.navCartIsOpen : false
-  
     setState({
       ...state,
-      navCartIsOpen:visiibility
+      navCartIsOpen:visiibility,
+      menuIsOpen:false
+
       
+    })
+  }
+  const changeMenuVisibility = (canOpenAgain=true) => {
+    const visiibility=(canOpenAgain) ? !state.menuIsOpen : false
+    setState({
+      ...state,
+      menuIsOpen:visiibility,
+      navCartIsOpen:false,
     })
   }
 
@@ -116,8 +112,7 @@ const useInitialState = () =>{
       cart:[],
     })
   }
-
-  console.log(state.user)
+  console.log(state)
 
 
 
@@ -126,11 +121,12 @@ const useInitialState = () =>{
   addToCartFunction,
   deleteToCartFunction,
   isInTheCart,
-  // isVisible,
   changeCartVisibility,
+  changeMenuVisibility,
   setUser,
   setOrder,
-  setHomeProductCategory
+  setHomeProductCategory,
+  // createAccount,
   }
 }
 

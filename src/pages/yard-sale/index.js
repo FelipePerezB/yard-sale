@@ -1,11 +1,3 @@
-// export default function Home() {
-//   return (
-//     <>
-
-//     </>
-//   )
-// }
-
 import React, { useContext } from 'react'
 import Categories from '@components/Categories'
 import ChangeOrder from '@components/ChangeOrder'
@@ -21,7 +13,13 @@ function Home() {
 
   const {state} = useContext(AppContext)
 
-  let mainState = (state.navCartIsOpen) ? "main-home-open": "main-pc"
+  // let mainState = (state.navCartIsOpen || state.menuIsOpen) ? "main-home-open-left": "main-pc"
+  
+  let mainState = (state.navCartIsOpen)
+    ? "main-home-open"
+    : (state.menuIsOpen)
+      ? "main-home-open-left"
+      : "main-pc"
   
   return (
     <>
