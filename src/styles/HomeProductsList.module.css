@@ -1,0 +1,42 @@
+.home-products{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, auto));
+}
+
+/* .blur{
+  background-color: white;
+  transition: background-color 2s; 
+} */
+
+.blur, .blur-active{ 
+  visibility: hidden;
+  position: fixed;
+  top: .6rem;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh);
+}
+
+.blur-active{
+  transition: background-color 1s;
+  background-color: #808080a3;
+}
+
+@media (min-width:550px) {
+  .home-products{
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  }
+
+  .blur-active{
+    visibility: visible;   
+  }
+}
+
+@media (min-width:900px) {
+  .home-products{
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+}

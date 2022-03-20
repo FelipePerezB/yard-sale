@@ -1,0 +1,39 @@
+.title{
+  font-weight: 700;
+  display: flex;
+  height: auto;
+  margin: 8vh 0 calc(8vh - 1.2rem);
+  align-items: baseline;
+  justify-content: center;
+  gap: .8rem;
+  overflow: hidden;
+}
+
+.title__text, .title__text--active{
+  font-size: var(--large-size);
+}
+
+.title__text--active{
+  color: var(--primary-color);
+}
+
+.title__logo{
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  height: 2rem;
+}
+.title:hover{
+  color: black;
+}
+
+
+
+nav .title__text, nav .title__text--active{
+  font-size: 1.6rem;
+}
+
+nav .title{
+  align-items: center;
+  margin: 0;
+}

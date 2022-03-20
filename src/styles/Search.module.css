@@ -1,0 +1,39 @@
+.Search{
+  margin: .8rem auto;
+  width: 96%;
+  height: 2.5rem;
+  background-color: var(--form-color);
+  display: flex;
+  max-width: 25rem;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: start;
+  border-radius: var(--form-radious);
+}
+
+.Search__img{
+  width: 2.4rem;
+  padding: 0  8px;
+}
+
+.Search span{
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.Search input{
+  font-size: var(--small-size);
+  width: 100%;
+  background-color: var(--input-color);
+  justify-self: flex-end;
+  border: none;
+  color: gray;
+}
+
+.Search input:focus{
+  outline: none;
+}
+
+.Search input:focus .Search{
+  outline: 2px black solid;
+}

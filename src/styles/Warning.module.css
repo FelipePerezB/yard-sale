@@ -1,0 +1,20 @@
+.warning{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.warning > span{
+  background-color: aliceblue;
+}
+
+.warning > p{
+  color: #4a4a4a;
+  width: 100%;
+}
+
+.warning p{
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+.add-button{
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button:hover{
+  background-color: var(--primary-color-active);
+}
+
+.add-button input{
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  z-index: 2000000;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* .add-image{
+  aspect-ratio: 1/1;
+  height: 2.3rem;
+  width: 2.3rem;
+} */

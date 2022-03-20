@@ -1,0 +1,15 @@
+.resend-message{
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  height: 3.6rem;
+}
+
+.resend-message a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
