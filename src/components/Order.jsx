@@ -22,7 +22,7 @@ function Order({order}) {
           </span>
         </div>
         <div className={styles['order__price']}>
-          <span className={styles['price']}>{"$"+order.price}</span>
+          <span className='price'>{"$"+order.price}</span>
           <Image alt='show products' src={arrow}/>
         </div>
       </div>

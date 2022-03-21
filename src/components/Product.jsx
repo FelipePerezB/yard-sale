@@ -23,10 +23,10 @@ function Product({type="product",product}) {
     <div className={styles[type]}>
       <div className={styles['description']}>
         <img src={product.images[0]} alt={product.title}/>
-        <span className={styles['article']}>{product.title}</span>
+        <span className='article'>{product.title}</span>
       </div>
       <div>
-        <span className={styles['price']}>{"$"+product.price}</span>
+        <span className='price'>{"$"+product.price}</span>
           <div className={styles['delete-product']} >
             <Image 
               alt='delete product' className={styles['x-image']} 

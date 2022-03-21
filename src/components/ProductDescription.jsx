@@ -7,8 +7,8 @@ function ProductDescription({img,price, article,description}) {
     <>
       <Image alt={article} className={styles['image-article']} src={img}/>
       <div className={styles['price-article']}>
-        <span className={styles['price']} >{price}</span>
-        <span className={styles['article']} >{article}</span>
+        <span className={'price'} >{price}</span>
+        <span className='article' >{article}</span>
       </div>    
       <p>
         {description}

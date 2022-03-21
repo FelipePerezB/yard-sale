@@ -3,7 +3,7 @@
 //   problems:[]
 // }
 class Validation{
-  static validate({name, email, password}){
+  static validate({name, email, password, usersList, checkEmail}){
     const value = {
       text:"",
       problems:[]
@@ -13,7 +13,7 @@ class Validation{
       value.text = this.nameValidation({name:name, value:value})
       value.problems=this.problemDescription({type:"El nombre", value:value})
     } else if(email){
-      value.text = this.emailValidation({email:email, value:value})
+      value.text = this.emailValidation({email:email, value:value, usersList:usersList, checkEmail:checkEmail})
       value.problems=this.problemDescription({type:"El email", value:value})
     } else if(password){
       value.text = this.passwordValidation({password:password, value:value})
@@ -52,7 +52,17 @@ class Validation{
   }
 
 
-  static emailValidation({email, value}){
+  static emailValidation({email, value, usersList, checkEmail}){
+
+    if(checkEmail){
+      const userIndex=(usersList.findIndex((user)=>user.email===email.toLowerCase()))
+  
+      if(userIndex!==-1){
+        value.problems.push("ya está ocupado")
+        return email.toLowerCase()
+      }
+    }
+
     const filter = /[ a-z | 0-9 | @ | . | _  | - ]/i
 
     const emailArray = email.split("")

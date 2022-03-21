@@ -6,25 +6,32 @@ import LinkButton from '@components/LinkButton'
 import Title from '@containers/Title'
 import Main from '@containers/Main'
 import useReedirect from '@hooks/useReedirect'
+import Head from 'next/head'
 
 function PasswordRecovery() {
   return (
-    <Main>
-      <Title />
-      <Information
-       title="Password recovery" 
-       text="Inform the email address used to create your account"
-      />
-      <Input type="email">
-        Email address
-      </Input>
-      <Button buttonClass="button" url="SendEmail">
-        Submit
-      </Button>
-      <LinkButton href="/yard-sale/login">
-        Back to login
-      </LinkButton>
-    </Main>
+    <>
+      <Head>
+        <title>Password recovery | Yard Sale</title>
+      </Head>
+
+      <Main>
+        <Title />
+        <Information
+        title="Password recovery" 
+        text="Inform the email address used to create your account"
+        />
+        <Input type="email">
+          Email address
+        </Input>
+        <Button buttonClass="button" url="SendEmail">
+          Submit
+        </Button>
+        <LinkButton href="/yard-sale/login">
+          Back to login
+        </LinkButton>
+      </Main>
+    </>
     
   )
 }

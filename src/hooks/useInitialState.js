@@ -16,6 +16,7 @@ const useInitialState = () =>{
   const setHomeProductCategory = (category) => {
     setState({
       ...state,
+      menuIsOpen:false,
       homeProductsCategory:category
     })
   }
@@ -38,19 +39,6 @@ const useInitialState = () =>{
       state.newUsers.push(newUser)
     }
   }
-
-  console.log(state)
-  
-    // const createAccount = (newUser) =>{
-    //   setState({
-    //     ...state,
-    //     newUsers:[
-    //       ...state.newUsers,
-    //       newUser        
-    //     ],
-    //   })
-    // }
-
 
   const addToCartFunction = (payload) =>{
     setState({
@@ -75,11 +63,11 @@ const useInitialState = () =>{
       
     })
   }
-  const changeMenuVisibility = (canOpenAgain=true) => {
-    const visiibility=(canOpenAgain) ? !state.menuIsOpen : false
+  const changeMenuVisibility = (forceClose=false) => {
+    // const visiibility=(canOpenAgain) ? !state.menuIsOpen : false
     setState({
       ...state,
-      menuIsOpen:visiibility,
+      menuIsOpen: (forceClose) ? !forceClose : !state.menuIsOpen,
       navCartIsOpen:false,
     })
   }
@@ -96,6 +84,7 @@ const useInitialState = () =>{
 
     setState({
       ...state,
+      navCartIsOpen:false,
       orders:[
         ...state.orders,
         {
@@ -111,8 +100,8 @@ const useInitialState = () =>{
       ,
       cart:[],
     })
+    // changeCartVisibility()
   }
-  console.log(state)
 
 
 

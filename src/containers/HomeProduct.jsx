@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function HomeProduct({product,img, price, article}) {
   return (
-    <a href={"yard-sale/ProductInfo"} >
+    // <a href={"yard-sale/ProductInfo"} >
       <div className={styles['home-product']}>
         <img
           // width={100}
@@ -21,7 +21,7 @@ function HomeProduct({product,img, price, article}) {
           <AddToCart product={product}/>
         </section>
       </div>
-    </a>
+    // </a>
   )
 }
 

@@ -17,8 +17,7 @@ function CartCount() {
 
   function Checkout(){
     setOrder(state.cart)
-    changeCartVisibility()
-
+    // changeCartVisibility()
   }
 
   return (
@@ -27,9 +26,14 @@ function CartCount() {
         <span>Total</span>
         <span className='price'>{"$"+finalPrice}</span>
       </div>
-      <Button buttonClass="button" buttonFunction={()=>(Checkout())} url={"/yard-sale/MyOrders"}>
-        Checkout
-      </Button>
+      <Button buttonClass="button" buttonFunction={()=>{
+        setOrder(state.cart)
+        // changeCartVisibility()
+        }} 
+        url={"/yard-sale/MyOrders"}
+        >
+          Checkout
+        </Button>
     </section>   
   )
 }

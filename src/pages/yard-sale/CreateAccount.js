@@ -79,7 +79,7 @@ function CreateAccount() {
     }
     const validateName = Validation.validate({name:data.name})
     const validatePassword = Validation.validate({password:data.password})
-    const validateEmail = Validation.validate({email:data.email})
+    const validateEmail = Validation.validate({email:data.email}, state.newUsers)
 
     setUser({
       userName: (!validateName.problems) 

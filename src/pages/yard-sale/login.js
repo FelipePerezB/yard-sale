@@ -39,8 +39,8 @@ function Login() {
       password: formData.get("password")
     }
 
-    const userIndex=(state.users.findIndex((user)=>user.email===data.email))
-    const user=state.users[userIndex]
+    const userIndex=(state.newUsers.findIndex((user)=>user.email===data.email))
+    const user=state.newUsers[userIndex]
     {
       (userIndex !== -1) 
         ? (user.password===data.password)

@@ -30,30 +30,24 @@ function MobileMenu() {
       <Categories
         type='categories-mobile'
       />
-      <div className={styles['orders-account']}>
-        <Link href='/yard-sale/MyOrders'>My orders</Link>
-        <Link href='/yard-sale/MyAccount'>My account</Link>
-      </div>       
-      {/* <Space/> */}
-      <div className={styles['account-info']}>
       {
         (state.user.email)
           ? <>
-              <span>{state.user.email}</span>
-              <Link href='/yard-sale/login' >Sign out</Link>
-            </>
-          : <Link href={"/yard-sale/login"}>Sign in</Link>
+              <div className={styles['orders-account']} onClick={()=>changeMenuVisibility()}>
+                <Link href='/yard-sale/MyOrders'>My orders</Link>
+                <Link href='/yard-sale/MyAccount'>My account</Link>
+              </div>       
+              <div className={styles['account-info']}>
+                <span>{state.user.email}</span>
+                <Link href='/yard-sale/login' >Sign out</Link>
+              </div>             
+          </>
+        : <>
+            <div className={styles['account-info']}>
+              <Link href={"/yard-sale/login"}>Sign in</Link>
+            </div>
+          </>  
       }
-        {/* <span>
-          {
-            (state.user.email) 
-              ? state.user.email 
-              : null
-          } */}
-        {/* </span> */}
-        
-      </div> 
-      {/* <InfoMenu email="felipeeperez3@gmail.com" /> */}
     </div>
     <div onClick={()=>changeMenuVisibility(false)} className={styles[blurActive]}></div> 
     </>

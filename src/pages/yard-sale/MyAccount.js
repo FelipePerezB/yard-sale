@@ -82,7 +82,7 @@ function MyAccount() {
 
     const validateName = Validation.validate({name:inputsContent[0].value})
     const validatePassword = Validation.validate({password:inputsContent[2].value})
-    const validateEmail = Validation.validate({email:inputsContent[1].value})
+    const validateEmail = Validation.validate({email:inputsContent[1].value, usersList:state.usersList, checkEmail:false})
 
     setUser({
       userName: (!validateName.problems) 
@@ -96,11 +96,10 @@ function MyAccount() {
       password: (!validatePassword.problems) 
         ? desactiveError("Password", validatePassword.text, setPasswordErrors)
         : activeInputError("Password", validatePassword.problems, setPasswordErrors, password),
-    })
+    }, true)
 
     if(correctInputs === 3 || inputState){
       const errorsParagraph = document.getElementById("errors-p")
-
       errorsParagraph.innerText=``
       setInputState(!inputState)    
     }
