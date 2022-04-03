@@ -12,7 +12,7 @@ function HomeProduct({product,img, price, article}) {
   const openProduct = (product) => {
     setActualProduct(product)
     
-    router.push("/yard-sale/ProductInfo")    
+    router.push(" /ProductInfo")    
   }
   return (
     <div>

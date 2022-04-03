@@ -21,7 +21,7 @@ function PasswordRecovery() {
         <Button buttonClass="button" url="SendEmail">
           Submit
         </Button>
-        <LinkButton href="/yard-sale/login">Back to login</LinkButton>
+        <LinkButton href=" /login">Back to login</LinkButton>
       </Main>
     </>
   );

@@ -34,17 +34,17 @@ function MobileMenu() {
         (state.user.email)
           ? <>
               <div className={styles['orders-account']} onClick={()=>changeMenuVisibility()}>
-                <Link href='/yard-sale/MyOrders'>My orders</Link>
-                <Link href='/yard-sale/MyAccount'>My account</Link>
+                <Link href=' /MyOrders'>My orders</Link>
+                <Link href=' /MyAccount'>My account</Link>
               </div>       
               <div className={styles['account-info']}>
                 <span>{state.user.email}</span>
-                <Link href='/yard-sale/login' >Sign out</Link>
+                <Link href=' /login' >Sign out</Link>
               </div>             
           </>
         : <>
             <div className={styles['account-info']}>
-              <Link href={"/yard-sale/login"}>Sign in</Link>
+              <Link href={" /login"}>Sign in</Link>
             </div>
           </>  
       }

@@ -98,7 +98,7 @@ function CreateAccount() {
         },
         true
       );
-      router.push('/yard-sale/');
+      router.push(' /');
     }
   };
   const inputs = [
@@ -118,17 +118,17 @@ function CreateAccount() {
   return (
     <Main>
       <Title />
-      <form action="/yard-sale/" className={'form'} ref={formSignup}>
+      <form action=" /" className={'form'} ref={formSignup}>
         {inputs.map((input) => (
           <Input type={input.type} name={input.name} key={input.name} id={input.name}>
             {input.name}
           </Input>
         ))}
         <p id="errors-p"></p>
-        <Button buttonClass="button" buttonFunction={handleSubmit} type={'submit'} url="/yard-sale/">
+        <Button buttonClass="button" buttonFunction={handleSubmit} type={'submit'} url=" /">
           Create account
         </Button>
-        {/* <Button buttonClass="button"  buttonFunction={handleSubmit} type={"submit"} url="/yard-sale/" >
+        {/* <Button buttonClass="button"  buttonFunction={handleSubmit} type={"submit"} url=" /" >
           Create account
         </Button> */}
       </form>

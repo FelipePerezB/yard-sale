@@ -18,7 +18,7 @@ function SendEmail() {
         <Title />
         <Information title="¡Email has been sent!" text="Please check your inbox for instruccions on how to reset the password" />
         <EmailImage />
-        <Button buttonClass="button" url="/yard-sale/login">
+        <Button buttonClass="button" url=" /login">
           Login
         </Button>
         <ResendMessage spanText="Didn't recive the email?" aText="Resend" />

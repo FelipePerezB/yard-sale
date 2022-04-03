@@ -22,7 +22,7 @@ function Login() {
       email: user.email,
       password: user.password,
     });
-    router.push('/yard-sale/');
+    router.push(' /');
   };
 
   const error = (error) => {
@@ -64,16 +64,13 @@ function Login() {
           <Button buttonClass="button" buttonFunction={handleSubmit} type="submit">
             Login
           </Button>
-          <LinkButton href="/yard-sale/PasswordRecovery">Forgot my password</LinkButton>
+          <LinkButton href=" /PasswordRecovery">Forgot my password</LinkButton>
           <p id="errors-p"></p>
 
           <Space />
-          <Button url="/yard-sale/CreateAccount" buttonClass="drop-button-white">
+          <Button url=" /CreateAccount" buttonClass="drop-button-white">
             Sign up
           </Button>
-          {/* <Button buttonFunction={()=>{useReedirect("/yard-sale/create-account")}} buttonClass='drop-button-white'>
-            Sign up
-          </Button> */}
         </form>
       </Main>
     </>

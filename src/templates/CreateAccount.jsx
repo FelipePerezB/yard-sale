@@ -18,7 +18,7 @@ function CreateAccount() {
       <Input>
         Password
       </Input>
-      <Button buttonFunction={()=>{useReedirect("/yard-sale/")}} >
+      <Button buttonFunction={()=>{useReedirect(" /")}} >
         Create account
       </Button>
     </Main>

@@ -19,7 +19,7 @@ function NotFound() {
         <h3>Page not found</h3>
         <p>The page you are looking is not available</p>
       </div>
-      <Button buttonFunction={()=>{useReedirect("/yard-sale/")}} buttonClass="not-found-button">
+      <Button buttonFunction={()=>{useReedirect(" /")}} buttonClass="not-found-button">
         Back to Home
       </Button>
     </main>    

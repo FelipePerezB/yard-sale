@@ -16,7 +16,7 @@ function SendEmail() {
         text="Please check your inbox for instruccions on how to reset the password"
       />
       <EmailImage/>
-      <Button buttonFunction={()=>{useReedirect("/yard-sale/login")}} >
+      <Button buttonFunction={()=>{useReedirect(" /login")}} >
         Login
       </Button>
       <ResendMessage

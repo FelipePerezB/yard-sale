@@ -28,7 +28,7 @@ function CartCount() {
         setOrder(state.cart)
         // changeCartVisibility()
         }} 
-        url={"/yard-sale/MyOrders"}
+        url={" /MyOrders"}
         >
           Checkout
         </Button>

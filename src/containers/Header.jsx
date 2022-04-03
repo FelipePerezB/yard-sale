@@ -43,7 +43,7 @@ function Header() {
           </li>
 
           <li className={styles['title-categories-container']}>
-            <Link href={"/yard-sale/"} >
+            <Link href={" /"} >
              <a>
                <Title/>
              </a>
@@ -62,7 +62,7 @@ function Header() {
                       </div>
                       <NavMenu/>
                     </div>
-                  : <LinkButton href={"/yard-sale/login"}>Sign in</LinkButton>
+                  : <LinkButton href={" /login"}>Sign in</LinkButton>
               }
             </div>
 
@@ -71,7 +71,7 @@ function Header() {
               <div className={styles['cart-icon']} onClick={()=>changeCartVisibility()} >
                 <NavIcon
                     alt={"go to the shopping cart"}
-                    link="/yard-sale/shopping-cart"
+                    link=" /shopping-cart"
                     img={cart}
                 />
                 {haveProducts() 

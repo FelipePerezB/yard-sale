@@ -36,12 +36,12 @@ function Login() {
           <Button  buttonFunction={handleSubmit} type='submit' >
             Login
           </Button>
-          <LinkButton href="/yard-sale/password-recovery">
+          <LinkButton href=" /password-recovery">
             Forgot my password
           </LinkButton>
 
           <Space/>
-          <Button buttonFunction={()=>{useReedirect("/yard-sale/create-account")}} buttonClass='button-white drop-button'>
+          <Button buttonFunction={()=>{useReedirect(" /create-account")}} buttonClass='button-white drop-button'>
             Sign up
           </Button>
         </form>

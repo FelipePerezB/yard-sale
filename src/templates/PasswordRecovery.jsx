@@ -18,7 +18,7 @@ function PasswordRecovery() {
       <Input type="email">
         Email address
       </Input>
-      <Button buttonFunction={()=>{useReedirect("/yard-sale/send-email")}} >
+      <Button buttonFunction={()=>{useReedirect(" /send-email")}} >
         Submit
       </Button>
       <LinkButton href="/login">

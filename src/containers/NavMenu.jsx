@@ -6,15 +6,15 @@ function NavMenu() {
   return (
     <div className={styles['nav-menu']}>
       <div className={styles['settings']}>
-      <Link href={'/yard-sale/MyOrders'}>
+      <Link href={' /MyOrders'}>
         {/* <a></a> */}
         My orders
       </Link>
-      <Link href='/yard-sale/MyAccount'>
+      <Link href=' /MyAccount'>
         My account
       </Link>
       </div>
-      <Link href='/yard-sale/login'>Sign out</Link>
+      <Link href=' /login'>Sign out</Link>
     </div>
   )
 }
