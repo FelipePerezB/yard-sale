@@ -10,14 +10,13 @@ function HomeProduct({product,img, price, article}) {
   const router = useRouter();
 
   const openProduct = (product) => {
-    console.log("Hola")
     setActualProduct(product)
     
     router.push("/yard-sale/ProductInfo")    
   }
   return (
     <div>
-        <div className={styles['home-product']}>
+        <div className={styles['home-product']} onClick={()=>openProduct(product)}>
           <Image
             width={100}
             height={150}

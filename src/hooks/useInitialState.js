@@ -103,8 +103,6 @@ const useInitialState = () => {
 
   };
 
-  console.log(state)
-
   return {
     state,
     addToCartFunction,

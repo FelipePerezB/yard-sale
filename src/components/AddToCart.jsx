@@ -5,7 +5,6 @@ import Image from 'next/image';
 import add from "@icons/add-to-shopping-cart.svg";
 import added from "@icons/added.png";
 import AppContext from '../context/AppContext';
-import Link from 'next/link';
 
 function AddToCart({product}) {
   const { addToCartFunction, deleteToCartFunction, isInTheCart } = useContext(AppContext);
@@ -21,7 +20,7 @@ function AddToCart({product}) {
     }
   };
   return (
-    <Link href={""} passHref>
+
       <div 
         style={
           (isAdded)
@@ -42,7 +41,7 @@ function AddToCart({product}) {
               src={image}
             />
       </div>   
-    </Link>
+
   );
 };
 
