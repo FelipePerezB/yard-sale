@@ -1,13 +1,8 @@
-import React from 'react'
-import styles from "../styles/NavIcon.module.css"
-import Image from 'next/image'
-import Link from 'next/link'
-import cart from "@icons/cart.svg"
+import React from 'react';
+import styles from "../styles/NavIcon.module.css";
+import Image from 'next/image';
 
-function NavIcon({img,alt, iconFunction}) {
-  // if(img="cart"){
-  //   img=cart
-  // }
+function NavIcon({img,alt}) {
 
   return (
     <Image 
@@ -18,7 +13,7 @@ function NavIcon({img,alt, iconFunction}) {
       src={img} 
       alt={alt}
     />
-  )
-}
+  );
+};
 
-export default NavIcon
+export default NavIcon;

@@ -1,5 +1,6 @@
-import React from 'react'
-import styles from "../styles/ResendMessage.module.css"
+import Link from 'next/link';
+import React from 'react';
+import styles from "../styles/ResendMessage.module.css";
 
 function ResendMessage({spanText, aText}) {
   return (
@@ -7,12 +8,11 @@ function ResendMessage({spanText, aText}) {
       <span>
         { spanText }
       </span>
-      <a>
+      <Link href={""} passHref>
         { aText }
-      </a>
+      </Link>
     </div>
-    
-  )
-}
+  );
+};
 
-export default ResendMessage
+export default ResendMessage;

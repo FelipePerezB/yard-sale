@@ -1,5 +1,5 @@
-const useReedirect=(url)=>{
-  document.location.href=url
-}
+const useReedirect = (url) => {
+  document.location.href = url;
+};
 
-export default useReedirect
+export default useReedirect;

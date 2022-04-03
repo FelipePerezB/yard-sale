@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from "../styles/Search.module.css"
-import Image from 'next/image'
+import React from 'react';
+import styles from "../styles/Search.module.css";
+import Image from 'next/image';
 
-import lens from "@icons/lens.svg"
+import lens from "@icons/lens.svg";
 
 function Search() {
   return (
@@ -10,7 +10,7 @@ function Search() {
       <Image alt='search icon' src={lens}  className={styles["Search__img"]} />
       <input placeholder='Search product...' className={styles['SearchInput']} />
     </div>    
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

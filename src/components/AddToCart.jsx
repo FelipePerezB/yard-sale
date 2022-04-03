@@ -1,70 +1,49 @@
-import React, { useContext, useState } from 'react'
-// import "../styles/AddToCart.module.css"
-// import "../styles/AddToCart.module.css"
-import styles from "../styles/AddToCart.module.css"
-import Image from 'next/image'
+import React, { useContext } from 'react';
+import styles from "../styles/AddToCart.module.css";
+import Image from 'next/image';
 
-import add from "@icons/add-to-shopping-cart.svg"
-import added from "@icons/added.png"
-import AppContext from '../context/AppContext'
+import add from "@icons/add-to-shopping-cart.svg";
+import added from "@icons/added.png";
+import AppContext from '../context/AppContext';
+import Link from 'next/link';
 
 function AddToCart({product}) {
-  const { addToCartFunction, deleteToCartFunction, isInTheCart } = useContext(AppContext)
+  const { addToCartFunction, deleteToCartFunction, isInTheCart } = useContext(AppContext);
 
-  let image = isInTheCart(product.id) ? added : add
-  let isAdded = isInTheCart(product.id) ? true : false
+  let image = isInTheCart(product.id) ? added : add;
+  let isAdded = isInTheCart(product.id) ? true : false;
 
   const AddToCartButton = (product)=>{
     if(isInTheCart(product.id)){
-      deleteToCartFunction(product.id)      
+      deleteToCartFunction(product.id);      
     } else{
-      addToCartFunction(product)
+      addToCartFunction(product);
     }
-  }
-
-  const style={
-    with:"10px"
-  }
-
+  };
   return (
-    <div className={styles[""]}>
+    <Link href={""} passHref>
       <div 
-      style={
-        (isAdded)
-          ?{
-        backgroundColor:"white"
-      } : null
-      } 
-      className={styles['add-button']}>
-        <label htmlFor={"add-to-cart-"+product.id}>{""}</label>
-          <input 
-          id={"add-to-cart-"+product.id} 
-          type="checkbox" 
-          onClick={()=>AddToCartButton(product)}/>
-
-          {/* <div */}
-          <>
+        style={
+          (isAdded)
+            ?{
+          backgroundColor:"white"
+        } : null
+        } 
+        className={styles['add-button']}>
+          <label htmlFor={"add-to-cart-"+product.id}>{""}</label>
+            <input 
+            id={"add-to-cart-"+product.id} 
+            type="checkbox" 
+            onClick={()=>AddToCartButton(product)}/>
             <Image
               width={"25"}
               height={"25"}
-              // style={style}
-
-              // styles={{
-              //   width:"100%"
-              // }}
-              // className={styles['add-image']}
               alt='add to cart'
               src={image}
             />
-
-          </>
-          {/* </div> */}
-
       </div>   
-    </div>
-  )
-}
+    </Link>
+  );
+};
 
-
-
-export default AddToCart
+export default AddToCart;

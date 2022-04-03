@@ -1,7 +1,7 @@
-import React from 'react'
-import sad from "@icons/sad.svg"
-import Image from 'next/image'
-import styles from "../styles/Warning.module.css"
+import React from 'react';
+import sad from "@icons/sad.svg";
+import Image from 'next/image';
+import styles from "../styles/Warning.module.css";
 
 function Warning({text, instruction}) {
   return (
@@ -10,7 +10,7 @@ function Warning({text, instruction}) {
       <Image className={styles["sad-face"]} src={sad} alt=""/>
       <p>{instruction}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Warning
+export default Warning;

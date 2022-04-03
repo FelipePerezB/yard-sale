@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from "../styles/ChangeOrder.module.css"
+import React from 'react';
+import styles from "../styles/ChangeOrder.module.css";
 
 function ChangeOrder() {
   return (
@@ -16,7 +16,7 @@ function ChangeOrder() {
       </option>
     </select>
   </div>
-  )
-}
+  );
+};
 
-export default ChangeOrder
+export default ChangeOrder;

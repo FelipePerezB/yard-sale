@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from "../styles/ProductDescription.module.css"
-import Image from 'next/image'
+import React from 'react';
+import styles from "../styles/ProductDescription.module.css";
+import Image from 'next/image';
 
 function ProductDescription({img,price, article,description}) {
   return (
@@ -14,7 +14,7 @@ function ProductDescription({img,price, article,description}) {
         {description}
       </p>
     </>
-  )
-}
+  );
+};
 
-export default ProductDescription
+export default ProductDescription;

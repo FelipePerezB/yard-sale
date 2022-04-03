@@ -68,7 +68,7 @@
 .product > div, .product-order > div{
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: .4rem;
 }
 

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import NavIcon from '@components/NavIcon'
 import styles from "../styles/Header.module.css"
 import Title from "../containers/Title"
@@ -9,9 +9,6 @@ import cart from "@icons/cart.svg"
 import NavMenu from './NavMenu'
 import arrow from "@icons/arrow.svg"
 import AppContext from '../context/AppContext'
-// import NavShoppingCart from './NavShoppingCart'
-import Product from '@components/Product'
-import CartCount from './CartCount'
 import NavShoppingCart from './NavShoppingCart'
 import Space from '@components/Space'
 

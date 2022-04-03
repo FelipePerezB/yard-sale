@@ -1,16 +1,13 @@
-import React, { useContext } from 'react'
-import styles from "../styles/Order.module.css"
-// import "../styles/global.css"
-
-import arrow from "@icons/arrow.svg"
-import AppContext from '../context/AppContext'
-import Image from 'next/image'
-import Product from './Product'
+import React from 'react';
+import styles from "../styles/Order.module.css";
+import arrow from "@icons/arrow.svg";
+import Image from 'next/image';
+import Product from './Product';
 
 function Order({order}) {
   const style = {
     height: `${order.numberOfArticles * 4 + 0.6}rem`
-  }
+  };
   return (
     <article>
       <input type="checkbox" className={styles['order-selected']}/>
@@ -29,11 +26,12 @@ function Order({order}) {
       <div style={style} className={styles['order-products']}>
         {order.products.map((product)=>
           product.map((item)=>(
-            <Product type='product-order' product={item}/>
+
+            <Product key={item.title} type='product-order' product={item}/>
           )))}
       </div>
     </article>    
-  )
-}
+  );
+};
 
-export default Order
+export default Order;

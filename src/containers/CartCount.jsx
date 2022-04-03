@@ -2,9 +2,7 @@ import React, { useContext } from 'react'
 import Button from '@components/Button'
 // import "../styles/CartCount.module.css"
 import styles from "../styles/CartCount.module.css"
-import useReedirect from '../hooks/useReedirect'
 import AppContext from '../context/AppContext'
-import useCheckout from '@hooks/useCheckout'
 
 function CartCount() {
   const {state, setOrder, changeCartVisibility} = useContext(AppContext)

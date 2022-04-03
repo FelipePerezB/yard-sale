@@ -1,25 +1,18 @@
-import React from 'react'
-import styles from "../styles/Button.module.css"
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-
-// const getUrl = () => (window)
+import React from 'react';
+import styles from "../styles/Button.module.css";
+import Link from 'next/link';
 
 function Button(
   {
-    url=useRouter().pathname,
+    url="",
     children, 
     buttonFunction, 
     type="button", 
     buttonClass,
   }){
-    (url!==undefined)
-      ? url
-      : useRouter().pathname
-
 
   return (
-    <Link href={url}>
+    <Link href={url} passHref>
       <button
         onClick={ buttonFunction }
         type={type}  
@@ -27,7 +20,7 @@ function Button(
           {children}
       </button>    
     </Link>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
