@@ -5,7 +5,7 @@ import Image from 'next/image';
 function ProductDescription({img,price, article,description}) {
   return (
     <>
-      <Image alt={article} className={styles['image-article']} src={img}/>
+      <Image width={100} height={250} alt={article} className={styles['image-article']} src={img}/>
       <div className={styles['price-article']}>
         <span className={'price'} >{price}</span>
         <span className='article' >{article}</span>

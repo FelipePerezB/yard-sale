@@ -2,7 +2,6 @@
   position: absolute;
   top: -8px;
   right: -4vw;
-  /* right: -.9rem; */
   height: 100vh;
   width: 0;
   border-radius: var(--form-radious);

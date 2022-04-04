@@ -20,7 +20,7 @@
 }
 
 .main-home-open-left{
-  margin-left: 100vw;
+  display: none;
 }
 
 .main-pc, .main-home-open, .main-home-open-left{

@@ -48,7 +48,7 @@ function ProductInfo() {
             />
             <Space />
             <Button buttonClass={buttonClass} buttonFunction={()=>AddToCartButton(product)}>
-              <Image alt="cart icon" src={image} width={100} height={30}/>
+              <Image alt="cart icon" src={image} width={30} height={30}/>
               {text}
             </Button>
           </Main>

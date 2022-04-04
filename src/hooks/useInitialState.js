@@ -25,6 +25,7 @@ const useInitialState = () => {
   const setUser = ({ email, password, userName }, bool = false) => {
     setState({
       ...state,
+      menuIsOpen: false,
       user: {
         userName: userName,
         email: email,
@@ -98,7 +99,8 @@ const useInitialState = () => {
   const setActualProduct = (product) => {
     setState({
       ...state,
-      actualProduct: product
+      actualProduct: product,
+      navCartIsOpen:false,
     });
 
   };

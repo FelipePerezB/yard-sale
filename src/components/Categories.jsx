@@ -10,7 +10,7 @@ function Categories({type="categories"}) {
 
   const runFunctions = (category) =>{
     setHomeProductCategory(category);
-    router.push("/ /");
+    router.push("/");
   };
 
   return (

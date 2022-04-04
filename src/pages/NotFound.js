@@ -1,4 +1,4 @@
-import styles from '../../styles/NotFound.module.css';
+// import styles from '../../styles/NotFound.module.css';
 import React from 'react';
 import Button from '@components/Button';
 import sad from '@icons/sad.svg';
@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 function NotFound() {
   return (
-    <main className={styles['not-found']}>
+    <main className={'not-found'}>
       <h2>Error</h2>
-      <div className={styles['number']}>
+      <div className={'number'}>
         <span>4</span>
         <Image alt="sad face" src={sad} />
         <span>4</span>
