@@ -10,6 +10,8 @@ import AppContext from '@context/AppContext';
 import add from "@icons/add-to-shopping-cart.svg";
 import added from "@icons/added.png";
 import Head from 'next/head';
+import LinkButton from '@components/LinkButton';
+import Warning from '@components/Warning';
 
 function ProductInfo() {
   const {state, addToCartFunction, deleteToCartFunction, isInTheCart} = useContext(AppContext);
@@ -47,13 +49,24 @@ function ProductInfo() {
               description={product.description}
             />
             <Space />
-            <Button buttonClass={buttonClass} buttonFunction={()=>AddToCartButton(product)}>
-              <Image alt="cart icon" src={image} width={30} height={30}/>
-              {text}
-            </Button>
+
+            {
+              (state.user.email)
+                ?      
+                <Button buttonClass={buttonClass} buttonFunction={()=>AddToCartButton(product)}>
+                  <Image alt="cart icon" src={image} width={30} height={30}/>
+                {text}
+                </Button>
+                : <LinkButton href={"login"}>Inicia sesión para añadir el producto</LinkButton>
+  
+            }
           </Main>
           </>
-          : null
+          : 
+            <>
+              <Warning text={"No has seleccionado ningun producto"}></Warning>
+              <LinkButton href={"/"}>Ir al home</LinkButton>
+            </>
       }
     </>
   );

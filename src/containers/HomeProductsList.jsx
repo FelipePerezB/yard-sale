@@ -11,7 +11,7 @@ function HomeProducts() {
   const {state } = useContext(AppContext);
 
   let category = state.homeProductsCategory;
-  const products = useGetProducts(API);
+  const products = useGetProducts(API).filter((product) => product.images[0] !== "" && product.images.length > 1);
   // const products=[
   //   {
   //     price:200,

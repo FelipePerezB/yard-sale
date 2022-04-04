@@ -4,6 +4,7 @@
     height: max-content;
     place-content: center;
     align-items: center;
+    text-align: center;
 
 }
 .link-button-container a{

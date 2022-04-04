@@ -10,7 +10,6 @@ const useGetProducts = (API) => {
     }
     fetchData();
   }, [API]);
-
   return products;
 };
 

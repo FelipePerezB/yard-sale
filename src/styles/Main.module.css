@@ -19,9 +19,6 @@
   overflow-y: hidden;
 }
 
-.main-home-open-left{
-  display: none;
-}
 
 .main-pc, .main-home-open, .main-home-open-left{
   display: block;
@@ -30,6 +27,12 @@
   max-width: none;
   overflow-x: hidden;
 }
+
+/* .main-home-open-left{
+  height: 100vh;
+  scroll-behavior: contain;
+  overflow: hidden;
+} */
 
 @media (min-width: 550px){
   .main-pc, .main-home, .main-home-open{
