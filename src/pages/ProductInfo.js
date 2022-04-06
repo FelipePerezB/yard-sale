@@ -3,7 +3,6 @@ import Button from '@components/Button';
 import ProductDescription from '@components/ProductDescription';
 import Header from '@containers/Header';
 import Main from '@containers/Main';
-import Space from '@components/Space';
 
 import Image from 'next/image';
 import AppContext from '@context/AppContext';
@@ -37,31 +36,29 @@ function ProductInfo() {
       {
         (product)
           ? <>
-          <Head>
-            <title>Product info | Yard Sale</title>
-          </Head>
-          <Header />
-          <Main type="main-header">
-            <ProductDescription
-              img={product.images[0]}
-              price={"$"+product.price}
-              article={product.title}
-              description={product.description}
-            />
-            <Space />
-
-            {
-              (state.user.email)
-                ?      
-                <Button buttonClass={buttonClass} buttonFunction={()=>AddToCartButton(product)}>
-                  <Image alt="cart icon" src={image} width={30} height={30}/>
-                {text}
-                </Button>
-                : <LinkButton href={"login"}>Inicia sesión para añadir el producto</LinkButton>
-  
-            }
-          </Main>
-          </>
+            <Head>
+              <title>Product info | Yard Sale</title>
+            </Head>
+            <Header />
+            <Main type="main-header">
+              <ProductDescription
+                img={product.images[0]}
+                price={"$"+product.price}
+                article={product.title}
+                description={product.description}
+              />
+              {
+                (state.user.email)
+                  ?      
+                  <Button buttonClass={buttonClass} buttonFunction={()=>AddToCartButton(product)} dropButton={true}>
+                    <Image alt="cart icon" src={image} width={30} height={30}/>
+                  {text}
+                  </Button>
+                  : <LinkButton href={"login"}>Inicia sesión para añadir el producto</LinkButton>
+    
+              }
+            </Main>
+           </>
           : 
             <>
               <Warning text={"No has seleccionado ningun producto"}></Warning>

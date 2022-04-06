@@ -89,8 +89,7 @@ function Header() {
           
         </ul>
       </nav>
-      <Space/>
-      <Space/>
+      <Space spaceHeight='3.5rem'/>
     </header> 
   )
 }

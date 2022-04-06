@@ -23,7 +23,6 @@ function ProductInfo() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nostrum itaque ducimus suscipit excepturi ipsam incidunt. Odio cupiditate vitae minima voluptatum tempore eum recusandae ipsam, fugit id? Ab, debitis sapiente!
         "
       />
-      <Space/>
       <Button buttonClass='button drop-button'>
         <Image alt='cart icon' src={cart} />
         Add to the cart

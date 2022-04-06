@@ -152,7 +152,7 @@ function MyAccount() {
           Password
         </Input> */}
         <Space />
-        <Button buttonFunction={handleClick} buttonClass={buttonState}>
+        <Button dropButton={true} buttonFunction={handleClick} buttonClass={buttonState}>
           {buttonMessage}
         </Button>
       </Main>

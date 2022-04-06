@@ -12,12 +12,6 @@ function CartCount() {
     finalPrice=cart.reduce((price, item) =>(price+item.price),0)
   }
 
-
-  function Checkout(){
-    setOrder(state.cart)
-    // changeCartVisibility()
-  }
-
   return (
     <section className={styles['cart-count']} >
       <div className={styles['count']}>

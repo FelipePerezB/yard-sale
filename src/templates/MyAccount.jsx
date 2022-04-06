@@ -4,7 +4,6 @@ import Input from '@components/Input'
 import Subtitle from '@components/Subtitle'
 import Header from '../containers/Header'
 import Main from '../containers/Main'
-import Space from "@components/Space"
 
 function MyAccount() {
   return (
@@ -23,8 +22,7 @@ function MyAccount() {
         <Input type="password">
           Password
         </Input>
-        <Space/>
-        <Button buttonClass='button drop-button'>
+        <Button dropButton={true} buttonClass='button drop-button'>
           Save
         </Button>
       </Main>

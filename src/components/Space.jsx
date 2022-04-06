@@ -1,9 +1,12 @@
 import React from 'react';
-import styles from "../styles/Space.module.css";
+function Space({spaceHeight}) {
 
-function Space() {
+  const styles={
+    height:  spaceHeight,
+  };
+
   return (
-    <div className={styles['space']}>
+    <div style={styles}>
 
     </div>    
   );

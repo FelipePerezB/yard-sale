@@ -68,7 +68,7 @@ function Login() {
           <p id="errors-p"></p>
 
           <Space />
-          <Button url=" /CreateAccount" buttonClass="drop-button-white">
+          <Button url=" /CreateAccount" buttonClass="drop-button-white" dropButton={true}>
             Sign up
           </Button>
         </form>

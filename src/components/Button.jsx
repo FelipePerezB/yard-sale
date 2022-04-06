@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../styles/Button.module.css";
 import Link from 'next/link';
+import Space from './Space';
 
 function Button(
   {
@@ -9,9 +10,17 @@ function Button(
     buttonFunction, 
     type="button", 
     buttonClass,
+    dropButton=false,
   }){
 
   return (
+    <>
+    {
+      (dropButton)
+        ? <Space spaceHeight="3.2rem"/>
+        : null
+    }
+    
     <Link href={url} passHref>
       <button
         onClick={ buttonFunction }
@@ -20,6 +29,7 @@ function Button(
           {children}
       </button>    
     </Link>
+    </>
   );
 };
 

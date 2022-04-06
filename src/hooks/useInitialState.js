@@ -25,6 +25,7 @@ const useInitialState = () => {
   const setUser = ({ email, password, userName }, bool = false) => {
     setState({
       ...state,
+      navCartIsOpen:false,
       menuIsOpen: false,
       user: {
         userName: userName,
