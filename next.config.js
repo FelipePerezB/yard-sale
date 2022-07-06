@@ -1,26 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public',
+    register: true,
+    mode: 'production',
+    disable: false,
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest\.json$/],
+  },
   reactStrictMode: true,
   images:{
     domains:[
       "placeimg.com",
       "api.lorem.space"
     ]
-
   }
-  // env: {
-  //   customKey: 'customValue',
-  // },
-  // compress: true,
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/hola',
-  //       destination: 'https://gndx.dev',
-  //       permanent: true,
-  //     }
-  //   ]
-  // }
-}
-
-module.exports = nextConfig
+})
