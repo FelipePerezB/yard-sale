@@ -7,13 +7,17 @@ function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={initialState}>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN80WG7H93"></Script>
       <Script id="google-analytics" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-ZN80WG7H93');`}
+        {`
+          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+          ga('create', 'GOOGLE_ANALYTICS_ID', 'auto');
+          ga('send', 'pageview');
+        `}
       </Script>
+      <Script
+        src="https://www.google-analytics.com/analytics.js"
+        strategy="afterInteractive"
+      />
       <Component {...pageProps} />
     </AppContext.Provider>
   );

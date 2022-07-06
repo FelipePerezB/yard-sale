@@ -76,14 +76,14 @@ nav .categories{
 }
 
 @media (min-width:550px){
-  .categories{
+  main .categories{
     display: block;
   }
   
 }
 @media (min-width: 900px) {
-  .categories{
-    display: flex;
+  main .categories{
+    display: none;
   }
   nav .categories{
     width: 500%;
